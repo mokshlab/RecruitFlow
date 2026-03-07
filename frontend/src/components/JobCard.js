@@ -13,7 +13,6 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import { bookmarkJob, removeBookmark } from '../api';
 
@@ -104,27 +103,28 @@ const JobCard = ({ job, isNewJob = false }) => {
         borderRadius: 3,
         border: '1px solid',
         borderColor: 'divider',
+        borderLeft: '4px solid #0D9488',
         boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         '&:hover': {
-          transform: 'translateY(-8px)',
-          boxShadow: '0 6px 16px rgba(0, 0, 0, 0.12)',
-          borderColor: 'primary.light',
+          transform: 'translateY(-4px)',
+          boxShadow: '0 8px 24px rgba(13,148,136,0.15)',
+          borderColor: 'divider',
+          borderLeft: '4px solid #F59E0B',
         }
       }}
     >
       {/* Header Section */}
       <Box 
         sx={{ 
-          background: alpha('#f5f7fa', 1),
+          bgcolor: 'white',
           p: 2.5,
           position: 'relative',
           borderBottom: '1px solid',
           borderColor: '#e8eaf0',
-          minHeight: user ? 110 : 95
         }}
       >
-        {/* New Badge */}
+        {/* NEW Badge */}
         {isNewJob && (
           <Chip 
             label="NEW"
@@ -132,22 +132,19 @@ const JobCard = ({ job, isNewJob = false }) => {
             sx={{ 
               position: 'absolute',
               top: 10,
-              left: 10,
+              right: user ? 52 : 10,
               background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
               color: 'white',
               fontWeight: 700,
               fontSize: '0.65rem',
               height: 20,
-              px: 1,
               boxShadow: '0 2px 8px rgba(245, 158, 11, 0.4)',
               border: '1px solid rgba(255,255,255,0.2)',
-              '& .MuiChip-label': {
-                px: 1
-              }
+              '& .MuiChip-label': { px: 1 }
             }}
           />
         )}
-        
+
         {/* Bookmark Button */}
         {user && (
           <Tooltip title={isBookmarked ? "Remove bookmark" : "Bookmark job"}>
@@ -158,17 +155,15 @@ const JobCard = ({ job, isNewJob = false }) => {
                 position: 'absolute',
                 top: 10,
                 right: 10,
-                bgcolor: 'white',
-                color: isBookmarked ? 'primary.main' : 'action.active',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+                bgcolor: 'rgba(13,148,136,0.06)',
+                color: isBookmarked ? '#0D9488' : 'action.active',
                 transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
-                width: 36,
-                height: 36,
+                width: 34,
+                height: 34,
                 '&:hover': {
-                  bgcolor: 'white',
+                  bgcolor: 'rgba(13,148,136,0.12)',
                   transform: 'scale(1.1)',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
-                  color: isBookmarked ? 'primary.dark' : 'primary.main'
+                  color: '#0D9488'
                 }
               }}
             >
@@ -176,57 +171,90 @@ const JobCard = ({ job, isNewJob = false }) => {
             </IconButton>
           </Tooltip>
         )}
-        
-        {/* Company Name */}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb: 0.5, mt: isNewJob ? 3 : 0 }}>
-          <BusinessCenterIcon sx={{ color: 'primary.main', fontSize: 18, opacity: 0.8 }} />
-          <Typography 
-            variant="body2" 
-            sx={{ 
-              fontWeight: 600, 
-              color: 'primary.main',
-              opacity: 0.9,
-              fontSize: '0.8125rem'
+
+        {/* Company Avatar + Info */}
+        <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, pr: user ? 5 : 0 }}>
+          {/* Company Initial Avatar */}
+          <Box
+            sx={{
+              width: 42,
+              height: 42,
+              borderRadius: 2,
+              background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+              color: 'white',
+              fontWeight: 800,
+              fontSize: '1.1rem',
+              boxShadow: '0 2px 8px rgba(13,148,136,0.25)',
+              mt: 0.25
             }}
           >
-            {job.companyName}
-          </Typography>
+            {job.companyName?.charAt(0)?.toUpperCase() || 'C'}
+          </Box>
+
+          <Box sx={{ flex: 1, minWidth: 0 }}>
+            {/* Company name + job type chip */}
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75, flexWrap: 'wrap', mb: 0.5 }}>
+              <Typography
+                variant="body2"
+                sx={{ fontWeight: 600, color: '#0D9488', fontSize: '0.8125rem' }}
+              >
+                {job.companyName}
+              </Typography>
+              {job.jobType && (
+                <Chip
+                  label={job.jobType}
+                  size="small"
+                  sx={{
+                    height: 18,
+                    fontSize: '0.6rem',
+                    fontWeight: 700,
+                    bgcolor: alpha('#0D9488', 0.08),
+                    color: '#0D9488',
+                    border: '1px solid',
+                    borderColor: alpha('#0D9488', 0.2),
+                    '& .MuiChip-label': { px: 0.75, py: 0 }
+                  }}
+                />
+              )}
+            </Box>
+
+            {/* Job Title */}
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 800,
+                color: 'text.primary',
+                lineHeight: 1.3,
+                fontSize: '1.05rem',
+                mb: hasApplied ? 1 : 0
+              }}
+            >
+              {job.title}
+            </Typography>
+
+            {/* Applied Badge */}
+            {hasApplied && (
+              <Chip
+                icon={<CheckCircleIcon sx={{ fontSize: 14 }} />}
+                label="Applied"
+                size="small"
+                color="success"
+                variant="outlined"
+                sx={{
+                  fontWeight: 600,
+                  fontSize: '0.7rem',
+                  height: 22,
+                  borderWidth: '1.5px',
+                  '& .MuiChip-icon': { ml: 0.5 }
+                }}
+              />
+            )}
+          </Box>
         </Box>
-        
-        {/* Job Title */}
-        <Typography 
-          variant="h6" 
-          sx={{ 
-            fontWeight: 800,
-            color: 'text.primary',
-            mb: hasApplied ? 1.5 : 1.75,
-            pr: user ? 5 : 0,
-            lineHeight: 1.3,
-            fontSize: '1.15rem'
-          }}
-        >
-          {job.title}
-        </Typography>
-        
-        {/* Applied Badge */}
-        {hasApplied && (
-          <Chip 
-            icon={<CheckCircleIcon sx={{ fontSize: 16 }} />}
-            label="Applied" 
-            size="small"
-            color="success"
-            variant="outlined"
-            sx={{ 
-              fontWeight: 600,
-              fontSize: '0.75rem',
-              height: 26,
-              borderWidth: '1.5px',
-              '& .MuiChip-icon': {
-                ml: 0.5
-              }
-            }}
-          />
-        )}
       </Box>
 
       <CardContent sx={{ flexGrow: 1 }}>
@@ -240,8 +268,11 @@ const JobCard = ({ job, isNewJob = false }) => {
         
         {/* Salary */}
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 0.75 }}>
-          <Typography variant="body2" fontWeight={600} color="success.main">
-            {formattedSalary} / year
+          <Typography variant="body2" fontWeight={700} sx={{ color: '#F59E0B', fontSize: '0.9375rem' }}>
+            {formattedSalary}
+          </Typography>
+          <Typography variant="caption" sx={{ color: 'text.secondary', fontWeight: 500 }}>
+            / year
           </Typography>
         </Box>
         
@@ -265,14 +296,22 @@ const JobCard = ({ job, isNewJob = false }) => {
         <Button
           component={RouterLink}
           to={`/jobs/${job._id}`}
-          variant="outlined"
+          variant="contained"
+          disableElevation
           fullWidth
           sx={{ 
             borderRadius: 1.5,
             py: 1,
             fontWeight: 600,
             textTransform: 'none',
-            fontSize: '0.875rem'
+            fontSize: '0.875rem',
+            background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
+            boxShadow: '0 2px 8px rgba(13,148,136,0.2)',
+            '&:hover': {
+              background: 'linear-gradient(135deg, #0F766E 0%, #0c6b61 100%)',
+              boxShadow: '0 4px 16px rgba(13,148,136,0.35)',
+              transform: 'translateY(-1px)'
+            }
           }}
         >
           View Details
