@@ -23,7 +23,7 @@ import {
 } from '@mui/material';
 import {
   AdminPanelSettings as AdminIcon,
-  Work as WorkIcon,
+  BusinessCenter as WorkIcon,
   People as PeopleIcon,
   Description as ApplicationIcon,
   TrendingUp as TrendingIcon
@@ -89,22 +89,22 @@ const AdminDashboard = () => {
       title: 'Total Jobs', 
       value: stats?.totalJobs || 0, 
       icon: <WorkIcon sx={{ fontSize: 40 }} />,
-      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-      color: '#f093fb'
+      gradient: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
+      color: '#0D9488'
     },
     { 
       title: 'Total Applications', 
       value: stats?.totalApplications || 0, 
       icon: <ApplicationIcon sx={{ fontSize: 40 }} />,
-      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-      color: '#4facfe'
+      gradient: 'linear-gradient(135deg, #F97316 0%, #F59E0B 100%)',
+      color: '#F97316'
     },
     { 
       title: 'Registered Users', 
       value: stats?.totalUsers || 0, 
       icon: <PeopleIcon sx={{ fontSize: 40 }} />,
-      gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-      color: '#43e97b'
+      gradient: 'linear-gradient(135deg, #115E59 0%, #0D9488 100%)',
+      color: '#115E59'
     }
   ];
 
@@ -285,7 +285,7 @@ const AdminDashboard = () => {
                   ) : (
                     <TableRow>
                       <TableCell colSpan={6} align="center" sx={{ py: 8 }}>
-                        <WorkIcon sx={{ fontSize: 60, color: '#cbd5e1', mb: 2 }} />
+                        <WorkIcon sx={{ fontSize: 60, color: '#F59E0B', opacity: 0.35, mb: 2 }} />
                         <Typography color="text.secondary">
                           No jobs posted yet
                         </Typography>
