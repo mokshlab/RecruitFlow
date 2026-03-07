@@ -223,7 +223,7 @@ const HomePage = () => {
   };
 
   return (
-    <Box sx={{ minHeight: '100vh', bgcolor: '#f8f9fa' }}>
+    <Box sx={{ minHeight: '100vh', bgcolor: '#FFFBEB' }}>
       {error && (
         <Alert 
           severity="error" 
@@ -241,7 +241,7 @@ const HomePage = () => {
       {/* Hero Section - F-Pattern Layout with Visual Hierarchy */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #5e72e4 0%, #825ee4 50%, #5e72e4 100%)',
+          background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 50%, #0D9488 100%)',
           color: 'white',
           pt: { xs: 8, sm: 10, md: 14 },
           pb: { xs: 10, sm: 12, md: 16 },
@@ -264,7 +264,7 @@ const HomePage = () => {
             left: 0,
             right: 0,
             height: '80px',
-            background: 'linear-gradient(to top, #f8f9fa, transparent)'
+            background: 'linear-gradient(to top, #FFFBEB, transparent)'
           }
         }}
       >
@@ -287,14 +287,14 @@ const HomePage = () => {
                       label="Verified Opportunities"
                       sx={{
                         bgcolor: 'rgba(255,255,255,0.95)',
-                        color: '#667eea',
+                        color: '#0D9488',
                         fontWeight: 700,
                         fontSize: '0.875rem',
                         height: 40,
                         backdropFilter: 'blur(20px)',
                         border: '2px solid rgba(255,255,255,0.8)',
                         px: 1.5,
-                        boxShadow: '0 8px 32px rgba(0,0,0,0.15), 0 0 0 1px rgba(102,126,234,0.1)',
+                        boxShadow: '0 8px 32px rgba(0,0,0,0.15), 0 0 0 1px rgba(13,148,136,0.1)',
                         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                         animation: 'slideInLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)',
                         '@keyframes slideInLeft': {
@@ -303,7 +303,7 @@ const HomePage = () => {
                         },
                         '&:hover': {
                           transform: 'translateY(-2px)',
-                          boxShadow: '0 12px 40px rgba(0,0,0,0.2), 0 0 20px rgba(102,126,234,0.3)'
+                          boxShadow: '0 12px 40px rgba(0,0,0,0.2), 0 0 20px rgba(13,148,136,0.3)'
                         },
                         '& .MuiChip-icon': { 
                           color: '#4caf50', 
@@ -360,9 +360,9 @@ const HomePage = () => {
                       letterSpacing: '-1px'
                     }}
                   >
-                    Find Your Next
+                    Stop Searching.
                     <br />
-                    Opportunity
+                    Start Landing.
                   </Typography>
                   
                   {/* Supporting Text - Clarity */}
@@ -377,8 +377,8 @@ const HomePage = () => {
                       maxWidth: '600px'
                     }}
                   >
-                    Browse {jobs.length} curated job listings from top companies. 
-                    Apply quickly and track your applications in one place.
+                    Discover {jobs.length} verified opportunities from India's top companies.
+                    Apply in minutes, track real-time.
                   </Typography>
                   
                   {/* Social Proof Metrics - Trust Building */}
@@ -480,7 +480,7 @@ const HomePage = () => {
                   }}
                 >
                   <Typography variant="h6" sx={{ fontWeight: 700, mb: 3, color: 'text.primary' }}>
-                    Why Choose Us?
+                    Why Choose RecruitFlow?
                   </Typography>
                   
                   <Stack spacing={2.5}>
@@ -617,16 +617,16 @@ const HomePage = () => {
               fontWeight: 600,
               textTransform: 'none',
               border: '2px solid',
-              borderColor: showFilters ? 'primary.main' : alpha('#667eea', 0.3),
+              borderColor: showFilters ? 'primary.main' : alpha('#0D9488', 0.3),
               bgcolor: showFilters ? 'primary.main' : 'white',
               color: showFilters ? 'white' : 'primary.main',
               boxShadow: showFilters 
-                ? '0 4px 12px rgba(102, 126, 234, 0.3)' 
+                ? '0 4px 12px rgba(13, 148, 136, 0.3)' 
                 : '0 2px 8px rgba(0,0,0,0.08)',
               '&:hover': { 
-                bgcolor: showFilters ? 'primary.dark' : alpha('#667eea', 0.04),
+                bgcolor: showFilters ? 'primary.dark' : alpha('#0D9488', 0.04),
                 borderColor: 'primary.main',
-                boxShadow: '0 4px 16px rgba(102, 126, 234, 0.35)',
+                boxShadow: '0 4px 16px rgba(13, 148, 136, 0.35)',
                 transform: 'translateY(-1px)'
               },
               transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -911,8 +911,8 @@ const HomePage = () => {
                 px: 4,
                 borderRadius: 4,
                 border: '2px dashed',
-                borderColor: alpha('#667eea', 0.2),
-                bgcolor: alpha('#f8f9fa', 0.5),
+                borderColor: alpha('#0D9488', 0.2),
+                bgcolor: alpha('#FFFBEB', 0.5),
                 backdropFilter: 'blur(10px)'
               }}
             >
@@ -921,7 +921,7 @@ const HomePage = () => {
                   width: 120,
                   height: 120,
                   borderRadius: '50%',
-                  bgcolor: alpha('#667eea', 0.1),
+                  bgcolor: alpha('#0D9488', 0.1),
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -951,10 +951,10 @@ const HomePage = () => {
                     px: 4,
                     py: 1.5,
                     fontWeight: 600,
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    boxShadow: '0 4px 16px rgba(102, 126, 234, 0.3)',
+                    background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
+                    boxShadow: '0 4px 16px rgba(13, 148, 136, 0.3)',
                     '&:hover': {
-                      boxShadow: '0 6px 20px rgba(102, 126, 234, 0.4)',
+                      boxShadow: '0 6px 20px rgba(13, 148, 136, 0.4)',
                     }
                   }}
                 >
