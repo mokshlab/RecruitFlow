@@ -103,7 +103,7 @@ const UserDashboard = () => {
       {/* Top Bar with gradient accent */}
       <Box 
         sx={{ 
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
           height: '4px'
         }}
       />
@@ -195,7 +195,7 @@ const UserDashboard = () => {
                       fontSize: '0.875rem',
                       fontWeight: 500,
                       '&:hover': { 
-                        borderColor: '#667eea',
+                        borderColor: '#0D9488',
                         bgcolor: '#f6f8ff'
                       }
                     }}
@@ -246,10 +246,10 @@ const UserDashboard = () => {
                           borderColor: '#d0d7de',
                         },
                         '&:hover fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                         },
                         '&.Mui-focused fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                           borderWidth: '2px'
                         }
                       }
@@ -302,10 +302,10 @@ const UserDashboard = () => {
                           borderColor: '#d0d7de',
                         },
                         '&:hover fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                         },
                         '&.Mui-focused fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                           borderWidth: '2px'
                         }
                       }
@@ -335,10 +335,10 @@ const UserDashboard = () => {
                           borderColor: '#d0d7de',
                         },
                         '&:hover fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                         },
                         '&.Mui-focused fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                           borderWidth: '2px'
                         }
                       }
@@ -382,10 +382,10 @@ const UserDashboard = () => {
                           borderColor: '#d0d7de',
                         },
                         '&:hover fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                         },
                         '&.Mui-focused fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                           borderWidth: '2px'
                         }
                       }
@@ -415,10 +415,10 @@ const UserDashboard = () => {
                           borderColor: '#d0d7de',
                         },
                         '&:hover fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                         },
                         '&.Mui-focused fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                           borderWidth: '2px'
                         }
                       }
@@ -450,10 +450,10 @@ const UserDashboard = () => {
                           borderColor: '#d0d7de',
                         },
                         '&:hover fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                         },
                         '&.Mui-focused fieldset': {
-                          borderColor: '#667eea',
+                          borderColor: '#0D9488',
                           borderWidth: '2px'
                         }
                       }
@@ -484,7 +484,7 @@ const UserDashboard = () => {
                   gap: 1.5,
                   bgcolor: 'white'
                 }}>
-                  <DescriptionIcon sx={{ fontSize: 24, color: '#667eea' }} />
+                  <DescriptionIcon sx={{ fontSize: 24, color: '#0D9488' }} />
                   <Box sx={{ flex: 1 }}>
                     <Typography variant="body2" fontWeight="500" color="#24292f">
                       Current Resume
@@ -496,7 +496,7 @@ const UserDashboard = () => {
                         e.preventDefault();
                         setPdfViewerOpen(true);
                       }}
-                      sx={{ fontSize: '0.8125rem', color: '#667eea', cursor: 'pointer', textAlign: 'left' }}
+                      sx={{ fontSize: '0.8125rem', color: '#0D9488', cursor: 'pointer', textAlign: 'left' }}
                     >
                       View Resume →
                     </Link>
@@ -518,7 +518,7 @@ const UserDashboard = () => {
                   fontSize: '0.875rem',
                   fontWeight: 500,
                   '&:hover': { 
-                    borderColor: '#667eea',
+                    borderColor: '#0D9488',
                     bgcolor: '#f6f8ff'
                   }
                 }}
@@ -565,9 +565,9 @@ const UserDashboard = () => {
                   fontWeight: 600,
                   transition: 'all 0.2s ease',
                   '&:hover': {
-                    borderColor: '#667eea',
+                    borderColor: '#0D9488',
                     bgcolor: 'white',
-                    color: '#667eea'
+                    color: '#0D9488'
                   }
                 }}
               >
@@ -583,13 +583,13 @@ const UserDashboard = () => {
                   px: 4,
                   py: 1.25,
                   borderRadius: 2,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
                   boxShadow: '0 4px 14px rgba(102,126,234,0.4)',
                   fontSize: '0.9375rem',
                   fontWeight: 600,
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   '&:hover': {
-                    background: 'linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%)',
+                    background: 'linear-gradient(135deg, #0D9488 0%, #6a3f8f 100%)',
                     boxShadow: '0 6px 20px rgba(102,126,234,0.5)',
                     transform: 'translateY(-2px)'
                   },

@@ -141,7 +141,7 @@ const ContactPage = () => {
           sx={{
             p: 0.5,
             borderRadius: 4,
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
           }}
         >
           <Paper
@@ -194,10 +194,10 @@ const ContactPage = () => {
                   borderBottomColor: '#ccc',
                 },
                 '& .MuiInput-underline:hover:before': {
-                  borderBottomColor: '#667eea',
+                  borderBottomColor: '#0D9488',
                 },
                 '& .MuiInput-underline:after': {
-                  borderBottomColor: '#667eea',
+                  borderBottomColor: '#0D9488',
                 },
               }}
             />
@@ -220,10 +220,10 @@ const ContactPage = () => {
                   borderBottomColor: '#ccc',
                 },
                 '& .MuiInput-underline:hover:before': {
-                  borderBottomColor: '#667eea',
+                  borderBottomColor: '#0D9488',
                 },
                 '& .MuiInput-underline:after': {
-                  borderBottomColor: '#667eea',
+                  borderBottomColor: '#0D9488',
                 },
               }}
             />
@@ -245,10 +245,10 @@ const ContactPage = () => {
                   borderBottomColor: '#ccc',
                 },
                 '& .MuiInput-underline:hover:before': {
-                  borderBottomColor: '#667eea',
+                  borderBottomColor: '#0D9488',
                 },
                 '& .MuiInput-underline:after': {
-                  borderBottomColor: '#667eea',
+                  borderBottomColor: '#0D9488',
                 },
               }}
             />
@@ -272,10 +272,10 @@ const ContactPage = () => {
                   borderBottomColor: '#ccc',
                 },
                 '& .MuiInput-underline:hover:before': {
-                  borderBottomColor: '#667eea',
+                  borderBottomColor: '#0D9488',
                 },
                 '& .MuiInput-underline:after': {
-                  borderBottomColor: '#667eea',
+                  borderBottomColor: '#0D9488',
                 },
               }}
             />
@@ -288,13 +288,13 @@ const ContactPage = () => {
               disabled={loading}
               sx={{
                 py: 1.5,
-                background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
+                background: 'linear-gradient(90deg, #0D9488 0%, #0F766E 100%)',
                 fontSize: '1rem',
                 fontWeight: 600,
                 textTransform: 'none',
                 borderRadius: 2,
                 '&:hover': {
-                  background: 'linear-gradient(90deg, #5568d3 0%, #6a3f8f 100%)',
+                  background: 'linear-gradient(90deg, #0D9488 0%, #6a3f8f 100%)',
                 },
                 '&:disabled': {
                   background: '#ccc',

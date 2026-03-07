@@ -166,7 +166,7 @@ const JobDetailsPage = () => {
                       fontWeight: 700,
                       fontSize: '1rem',
                       textTransform: 'none',
-                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
                       boxShadow: '0 6px 20px rgba(102,126,234,0.4)',
                       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                       '&:hover': {
