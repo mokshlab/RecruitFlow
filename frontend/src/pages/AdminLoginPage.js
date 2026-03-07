@@ -70,7 +70,7 @@ const AdminLoginPage = () => {
       sx={{
         minHeight: '100vh',
         display: 'flex',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
         position: 'relative',
         overflow: 'hidden',
         '&::before': {
@@ -223,10 +223,10 @@ const AdminLoginPage = () => {
                     borderRadius: 2,
                     transition: 'all 0.2s',
                     '&:hover': {
-                      boxShadow: `0 0 0 2px ${alpha('#667eea', 0.1)}`
+                      boxShadow: `0 0 0 2px ${alpha('#F59E0B', 0.1)}`
                     },
                     '&.Mui-focused': {
-                      boxShadow: `0 0 0 3px ${alpha('#667eea', 0.15)}`
+                      boxShadow: `0 0 0 3px ${alpha('#F59E0B', 0.15)}`
                     }
                   }
                 }}
@@ -269,10 +269,10 @@ const AdminLoginPage = () => {
                     borderRadius: 2,
                     transition: 'all 0.2s',
                     '&:hover': {
-                      boxShadow: `0 0 0 2px ${alpha('#667eea', 0.1)}`
+                      boxShadow: `0 0 0 2px ${alpha('#F59E0B', 0.1)}`
                     },
                     '&.Mui-focused': {
-                      boxShadow: `0 0 0 3px ${alpha('#667eea', 0.15)}`
+                      boxShadow: `0 0 0 3px ${alpha('#F59E0B', 0.15)}`
                     }
                   }
                 }}
@@ -291,18 +291,18 @@ const AdminLoginPage = () => {
                   fontSize: '1rem',
                   fontWeight: 600,
                   textTransform: 'none',
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  boxShadow: '0 4px 15px rgba(102, 126, 234, 0.4)',
+                  background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+                  boxShadow: '0 4px 15px rgba(245, 158, 11, 0.4)',
                   transition: 'all 0.3s ease',
                   '&:hover': {
-                    boxShadow: '0 6px 20px rgba(102, 126, 234, 0.6)',
+                    boxShadow: '0 6px 20px rgba(245, 158, 11, 0.6)',
                     transform: 'translateY(-2px)'
                   },
                   '&:active': {
                     transform: 'translateY(0)'
                   },
                   '&:disabled': {
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
                     opacity: 0.7
                   }
                 }}
