@@ -566,10 +566,102 @@ const HomePage = () => {
               </Fade>
             </Grid>
           </Grid>
+
+          {/* Hero Search Bar */}
+          <Box sx={{ mt: { xs: 5, md: 6 }, position: 'relative', zIndex: 2 }}>
+            <Paper
+              elevation={0}
+              sx={{
+                p: 1,
+                borderRadius: 3,
+                bgcolor: 'rgba(255,255,255,0.97)',
+                backdropFilter: 'blur(20px)',
+                border: '2px solid rgba(255,255,255,0.8)',
+                boxShadow: '0 8px 40px rgba(0,0,0,0.18)',
+                display: 'flex',
+                gap: 1,
+                alignItems: 'center'
+              }}
+            >
+              <Box sx={{ display: 'flex', alignItems: 'center', flex: 1, px: 1.5, gap: 1 }}>
+                <SearchIcon sx={{ color: '#0D9488', fontSize: 24, flexShrink: 0 }} />
+                <Box
+                  component="input"
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                  placeholder="Search by title, company, or skill..."
+                  sx={{
+                    border: 'none',
+                    outline: 'none',
+                    width: '100%',
+                    fontSize: { xs: '0.9375rem', md: '1rem' },
+                    fontFamily: 'inherit',
+                    color: '#1C1917',
+                    bgcolor: 'transparent',
+                    py: 1.25,
+                    '&::placeholder': { color: '#9CA3AF' }
+                  }}
+                />
+              </Box>
+              <Button
+                variant="contained"
+                disableElevation
+                onClick={() => setShowFilters(true)}
+                sx={{
+                  borderRadius: 2,
+                  px: { xs: 2.5, sm: 4 },
+                  py: 1.5,
+                  fontWeight: 700,
+                  textTransform: 'none',
+                  fontSize: '0.9375rem',
+                  background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
+                  flexShrink: 0,
+                  boxShadow: 'none',
+                  '&:hover': {
+                    background: 'linear-gradient(135deg, #0F766E 0%, #0c6b61 100%)',
+                    boxShadow: '0 4px 16px rgba(13,148,136,0.35)'
+                  }
+                }}
+              >
+                Find Jobs
+              </Button>
+            </Paper>
+            <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.75)', mt: 1.5, display: 'block', textAlign: 'center', letterSpacing: 0.3 }}>
+              Popular: Frontend Developer &bull; Product Manager &bull; Data Analyst &bull; DevOps
+            </Typography>
+          </Box>
         </Container>
       </Box>
 
-      {/* Jobs Section */}
+      {/* Trust Stats Strip */}
+      <Box sx={{ bgcolor: 'white', borderBottom: '1px solid', borderColor: '#E5E7EB', py: { xs: 2.5, sm: 3 } }}>
+        <Container>
+          <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            justifyContent="center"
+            alignItems="center"
+            spacing={{ xs: 2, sm: 0 }}
+            divider={
+              <Box sx={{ display: { xs: 'none', sm: 'block' }, width: '1px', height: 24, bgcolor: '#E5E7EB', mx: 4 }} />
+            }
+          >
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
+              <CheckCircleIcon sx={{ color: '#0D9488', fontSize: 20 }} />
+              <Typography variant="body2" sx={{ fontWeight: 600, color: '#1C1917' }}>100% Verified Listings</Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
+              <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: '#0D9488', animation: 'pulse 2s infinite', '@keyframes pulse': { '0%, 100%': { opacity: 1 }, '50%': { opacity: 0.4 } } }} />
+              <Typography variant="body2" sx={{ fontWeight: 600, color: '#1C1917' }}>Real-time Application Tracking</Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
+              <SpeedIcon sx={{ color: '#F59E0B', fontSize: 20 }} />
+              <Typography variant="body2" sx={{ fontWeight: 600, color: '#1C1917' }}>Apply in Under 2 Minutes</Typography>
+            </Box>
+          </Stack>
+        </Container>
+      </Box>
+
+      {/* Jobs Section */
       <Container maxWidth={false} sx={{ py: { xs: 8, sm: 10, md: 12 }, px: { xs: 2, sm: 3, md: 4 } }}>
         {/* Section Header with Progressive Disclosure */}
         <Box sx={{ 
@@ -583,6 +675,10 @@ const HomePage = () => {
           <Box sx={{ flex: 1 }}>
             <Typography variant="h4" sx={{ fontWeight: 800, mb: 0.5, fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' } }}>
               Browse Opportunities
+            </Typography>
+            <Typography variant="body2" sx={{ color: 'text.secondary', fontWeight: 500 }}>
+              {filteredJobs.length} {filteredJobs.length === 1 ? 'position' : 'positions'} available
+              {hasActiveFilters ? ' matching your search' : ' right now'}
             </Typography>
           </Box>
           
@@ -691,7 +787,7 @@ const HomePage = () => {
                         alignItems: 'center',
                         pr: 4
                       },
-                      bgcolor: filters.experience !== '' ? alpha('#1976d2', 0.04) : 'transparent'
+                      bgcolor: filters.experience !== '' ? alpha('#0D9488', 0.04) : 'transparent'
                     }}
                     InputLabelProps={{
                       shrink: true
@@ -726,7 +822,7 @@ const HomePage = () => {
                     onChange={handleFilterChange}
                     placeholder="e.g., Mumbai, Remote"
                     sx={{
-                      bgcolor: filters.location ? alpha('#1976d2', 0.04) : 'transparent'
+                      bgcolor: filters.location ? alpha('#0D9488', 0.04) : 'transparent'
                     }}
                     InputProps={{
                       startAdornment: (
@@ -749,7 +845,7 @@ const HomePage = () => {
                     value={filters.minSalary}
                     onChange={handleFilterChange}
                     sx={{
-                      bgcolor: filters.minSalary ? alpha('#1976d2', 0.04) : 'transparent'
+                      bgcolor: filters.minSalary ? alpha('#0D9488', 0.04) : 'transparent'
                     }}
                     InputProps={{
                       startAdornment: (
@@ -772,7 +868,7 @@ const HomePage = () => {
                     value={filters.maxSalary}
                     onChange={handleFilterChange}
                     sx={{
-                      bgcolor: filters.maxSalary ? alpha('#1976d2', 0.04) : 'transparent'
+                      bgcolor: filters.maxSalary ? alpha('#0D9488', 0.04) : 'transparent'
                     }}
                     InputProps={{
                       startAdornment: (
