@@ -64,7 +64,7 @@ const AdminLayout = ({ children }) => {
       <Box
         sx={{
           p: 3,
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
           color: 'white'
         }}
       >
@@ -72,7 +72,7 @@ const AdminLayout = ({ children }) => {
           <AdminIcon /> Admin Portal
         </Typography>
         <Typography variant="caption" sx={{ opacity: 0.9 }}>
-          JobFinder Management
+          RecruitFlow Platform
         </Typography>
       </Box>
 
@@ -82,7 +82,7 @@ const AdminLayout = ({ children }) => {
           <Avatar sx={{ 
             width: 40, 
             height: 40, 
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
             fontWeight: 700
           }}>
             {admin?.username?.charAt(0).toUpperCase()}
@@ -115,14 +115,14 @@ const AdminLayout = ({ children }) => {
               sx={{
                 borderRadius: 2,
                 '&.Mui-selected': {
-                  bgcolor: alpha('#5568d3', 0.12),
-                  color: '#5568d3',
+                  bgcolor: alpha('#F59E0B', 0.12),
+                  color: '#F59E0B',
                   '&:hover': {
-                    bgcolor: alpha('#5568d3', 0.18)
+                    bgcolor: alpha('#F59E0B', 0.18)
                   }
                 },
                 '&:hover': {
-                  bgcolor: alpha('#5568d3', 0.08)
+                  bgcolor: alpha('#F59E0B', 0.08)
                 }
               }}
             >
