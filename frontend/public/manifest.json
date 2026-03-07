@@ -1,6 +1,6 @@
 {
-  "short_name": "JobFinder",
-  "name": "JobFinder - Find Your Dream Job",
+  "short_name": "RecruitFlow",
+  "name": "RecruitFlow - Launch Your Career",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#1976d2",
+  "theme_color": "#0D9488",
   "background_color": "#ffffff"
 }
