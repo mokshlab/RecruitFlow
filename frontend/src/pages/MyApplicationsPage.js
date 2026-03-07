@@ -483,14 +483,22 @@ const MyApplicationsPage = () => {
                       <Button 
                         component={RouterLink} 
                         to={`/jobs/${job._id}`}
-                        variant="outlined"
+                        variant="contained"
+                        disableElevation
                         fullWidth
                         sx={{
                           borderRadius: 1.5,
                           py: 1,
                           fontWeight: 600,
                           textTransform: 'none',
-                          fontSize: '0.875rem'
+                          fontSize: '0.875rem',
+                          background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
+                          boxShadow: '0 2px 8px rgba(13,148,136,0.2)',
+                          '&:hover': {
+                            background: 'linear-gradient(135deg, #0F766E 0%, #0c6b61 100%)',
+                            boxShadow: '0 4px 16px rgba(13,148,136,0.35)',
+                            transform: 'translateY(-1px)'
+                          }
                         }}
                       >
                         View Details
@@ -528,7 +536,7 @@ const MyApplicationsPage = () => {
           </>
         ) : (
           <Paper sx={{ p: 6, textAlign: 'center', maxWidth: 500, mx: 'auto' }}>
-            <WorkIcon sx={{ fontSize: 64, color: 'text.secondary', mb: 2, opacity: 0.5 }} />
+            <WorkIcon sx={{ fontSize: 64, color: '#0D9488', opacity: 0.25, mb: 2 }} />
             <Typography variant="h6" gutterBottom fontWeight={600}>
               {statusFilter !== 'all' 
                 ? `No ${statusFilter.charAt(0).toUpperCase() + statusFilter.slice(1)} Applications` 
