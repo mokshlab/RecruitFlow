@@ -45,7 +45,7 @@ const PdfViewer = ({ open, onClose, pdfUrl, title = "Resume" }) => {
             href={fullPdfUrl}
             target="_blank"
             download
-            sx={{ color: '#1976d2' }}
+            sx={{ color: '#0D9488' }}
           >
             <DownloadIcon />
           </IconButton>
