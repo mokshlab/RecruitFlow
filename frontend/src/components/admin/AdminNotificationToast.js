@@ -52,7 +52,7 @@ const AdminNotificationToast = ({ notification, open, onClose, autoHideDuration 
           boxShadow: '0 8px 24px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)',
           borderRadius: 3,
           border: '1px solid #e5e7eb',
-          borderLeft: '4px solid #2563eb',
+          borderLeft: '4px solid #0D9488',
           '& .MuiAlert-message': {
             width: '100%',
             p: 0
@@ -81,12 +81,12 @@ const AdminNotificationToast = ({ notification, open, onClose, autoHideDuration 
                 width: 40,
                 height: 40,
                 borderRadius: 2.5,
-                bgcolor: '#dbeafe',
+                bgcolor: 'rgba(13,148,136,0.1)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <FiberNewIcon sx={{ fontSize: 22, color: '#2563eb' }} />
+                <FiberNewIcon sx={{ fontSize: 22, color: '#0D9488' }} />
               </Box>
               <Typography sx={{
                 fontWeight: 700,

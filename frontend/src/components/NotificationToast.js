@@ -45,16 +45,16 @@ const NotificationToast = ({ notification, open, onClose }) => {
       'reviewed': {
         icon: <FiberManualRecordIcon />,
         severity: 'info',
-        color: '#3b82f6',
+        color: '#0D9488',
         title: 'Application Reviewed',
-        gradient: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)'
+        gradient: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)'
       },
       'under review': {
         icon: <FiberManualRecordIcon />,
         severity: 'info',
-        color: '#3b82f6',
+        color: '#0D9488',
         title: 'Application Under Review',
-        gradient: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)'
+        gradient: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)'
       },
       'shortlisted': {
         icon: <CheckCircleIcon />,
@@ -79,9 +79,9 @@ const NotificationToast = ({ notification, open, onClose }) => {
       'new-application': {
         icon: <PersonIcon />,
         severity: 'info',
-        color: '#3b82f6',
+        color: '#0D9488',
         title: 'New Application Received',
-        gradient: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)'
+        gradient: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)'
       }
     };
     return configs[type] || null;
