@@ -1,12 +1,12 @@
 // === Color Palette ===
 export const colors = {
   primary: {
-    main: '#667eea',
-    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    main: '#0D9488',
+    gradient: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
   },
   admin: {
-    gradient: 'linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%)',
-    border: '#e2e8f0',
+    gradient: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+    border: '#FDE68A',
   },
   text: {
     primary: '#2d3748',

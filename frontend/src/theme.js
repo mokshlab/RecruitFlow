@@ -5,18 +5,20 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#667eea', // Purple primary color
+      main: '#0D9488',    // Deep Teal — trust, growth, calm joy
+      dark: '#115E59',
+      light: '#5EEAD4',
     },
     secondary: {
-      main: '#764ba2', // Complementary purple
+      main: '#F59E0B',    // Amber Gold — serotonin, warmth, optimism
     },
     background: {
-      default: '#f7fafc', // Light background
-      paper: '#ffffff',   // White for cards and surfaces
+      default: '#FFFBEB',  // Warm cream — inviting, not clinical
+      paper: '#ffffff',
     },
     text: {
-      primary: '#2d3748',
-      secondary: '#4a5568',
+      primary: '#1C1917',  // Warm near-black
+      secondary: '#78716C',  // Warm gray
     },
   },
   typography: {
@@ -60,7 +62,7 @@ const theme = createTheme({
             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
           },
           '&.Mui-focused': {
-            boxShadow: '0 0 0 3px rgba(102, 126, 234, 0.2)',
+            boxShadow: '0 0 0 3px rgba(13, 148, 136, 0.2)',
           },
         },
       },
