@@ -1,6 +1,6 @@
-# Frontend - JobFinder
+# Frontend - RecruitFlow
 
-React single-page application for the JobFinder job portal with Material-UI and real-time WebSocket features.
+React single-page application for the RecruitFlow job portal with Material-UI and real-time WebSocket features.
 
 ## Quick Start
 

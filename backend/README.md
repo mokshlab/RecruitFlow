@@ -1,6 +1,6 @@
-# Backend - JobFinder API
+# Backend - RecruitFlow API
 
-Node.js/Express REST API server for the JobFinder job portal with real-time WebSocket support.
+Node.js/Express REST API server for the RecruitFlow job portal with real-time WebSocket support.
 
 ## Quick Start
 
