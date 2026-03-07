@@ -133,13 +133,13 @@ const JobCard = ({ job, isNewJob = false }) => {
               position: 'absolute',
               top: 10,
               left: 10,
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
               color: 'white',
               fontWeight: 700,
               fontSize: '0.65rem',
               height: 20,
               px: 1,
-              boxShadow: '0 2px 8px rgba(102, 126, 234, 0.4)',
+              boxShadow: '0 2px 8px rgba(245, 158, 11, 0.4)',
               border: '1px solid rgba(255,255,255,0.2)',
               '& .MuiChip-label': {
                 px: 1
