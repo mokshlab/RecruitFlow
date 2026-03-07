@@ -86,7 +86,7 @@ const getStatusBadge = (status) => {
       label: 'Under Review',
       icon: <FiberManualRecordIcon />,
       sx: {
-        backgroundColor: '#3b82f6',
+        backgroundcolor: '#0D9488',
         color: 'white',
         fontWeight: 600,
         fontSize: '0.75rem',
@@ -267,11 +267,11 @@ const MyApplicationsPage = () => {
                   fontWeight: 600,
                   fontSize: '0.875rem',
                   cursor: 'pointer',
-                  backgroundColor: statusFilter === 'all' ? '#667eea' : '#f5f5f5',
+                  backgroundColor: statusFilter === 'all' ? '#0D9488' : '#f5f5f5',
                   color: statusFilter === 'all' ? 'white' : '#424242',
-                  border: statusFilter === 'all' ? '2px solid #667eea' : '1px solid #e0e0e0',
+                  border: statusFilter === 'all' ? '2px solid #0D9488' : '1px solid #e0e0e0',
                   '&:hover': {
-                    backgroundColor: statusFilter === 'all' ? '#5568d3' : '#eeeeee'
+                    backgroundColor: statusFilter === 'all' ? '#0D9488' : '#eeeeee'
                   }
                 }}
               />
@@ -315,11 +315,11 @@ const MyApplicationsPage = () => {
                   fontWeight: 600,
                   fontSize: '0.875rem',
                   cursor: 'pointer',
-                  backgroundColor: statusFilter === 'under review' ? '#3b82f6' : '#e3f2fd',
+                  backgroundColor: statusFilter === 'under review' ? '#0D9488' : 'rgba(13,148,136,0.08)',
                   color: statusFilter === 'under review' ? 'white' : '#1565c0',
-                  border: statusFilter === 'under review' ? '2px solid #3b82f6' : '1px solid #bbdefb',
+                  border: statusFilter === 'under review' ? '2px solid #0D9488' : '1px solid rgba(13,148,136,0.2)',
                   '&:hover': {
-                    backgroundColor: statusFilter === 'under review' ? '#2563eb' : '#bbdefb'
+                    backgroundColor: statusFilter === 'under review' ? '#0F766E' : 'rgba(13,148,136,0.15)'
                   }
                 }}
               />
@@ -359,14 +359,14 @@ const MyApplicationsPage = () => {
               const getBorderStyle = () => {
                 if (isShortlisted) return '3px solid #10b981'; // Green for Shortlisted
                 if (isRejected) return '3px solid #ef4444'; // Red for Rejected
-                if (isUnderReview) return '2px solid #3b82f6'; // Blue for Under Review
+                if (isUnderReview) return '2px solid #0D9488'; // Teal for Under Review
                 return '1px solid #e0e0e0'; // Default for Pending
               };
               
               const getBoxShadow = () => {
                 if (isShortlisted) return '0 8px 24px rgba(16, 185, 129, 0.2)';
                 if (isRejected) return '0 8px 24px rgba(239, 68, 68, 0.15)';
-                if (isUnderReview) return '0 6px 20px rgba(59, 130, 246, 0.15)';
+                if (isUnderReview) return '0 6px 20px rgba(13, 148, 136, 0.15)';
                 return '0 2px 8px rgba(0, 0, 0, 0.08)';
               };
               
@@ -549,7 +549,7 @@ const MyApplicationsPage = () => {
               onClick={statusFilter !== 'all' ? () => setStatusFilter('all') : undefined}
               sx={{
                 background: statusFilter !== 'all' 
-                  ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+                  ? 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)'
                   : undefined
               }}
             >
