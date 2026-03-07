@@ -111,7 +111,7 @@ const LoginPage = () => {
               gutterBottom 
               sx={{ 
                 fontSize: { xs: '2rem', md: '2.75rem' },
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -170,7 +170,7 @@ const LoginPage = () => {
                     bgcolor: 'white',
                     boxShadow: '0 0 0 4px rgba(102,126,234,0.1)',
                     '& fieldset': {
-                      borderColor: '#667eea',
+                      borderColor: '#0D9488',
                       borderWidth: '2px'
                     }
                   }
@@ -233,7 +233,7 @@ const LoginPage = () => {
                     bgcolor: 'white',
                     boxShadow: '0 0 0 4px rgba(102,126,234,0.1)',
                     '& fieldset': {
-                      borderColor: '#667eea',
+                      borderColor: '#0D9488',
                       borderWidth: '2px'
                     }
                   }
@@ -260,7 +260,7 @@ const LoginPage = () => {
                 borderRadius: 2,
                 mb: 3,
                 background: isFormValid() 
-                  ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+                  ? 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)'
                   : '#cbd5e1',
                 color: isFormValid() ? 'white' : '#64748b',
                 boxShadow: isFormValid() 
@@ -270,7 +270,7 @@ const LoginPage = () => {
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': {
                   background: isFormValid()
-                    ? 'linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%)'
+                    ? 'linear-gradient(135deg, #0D9488 0%, #6a3f8f 100%)'
                     : '#cbd5e1',
                   boxShadow: isFormValid() 
                     ? '0 6px 20px rgba(102,126,234,0.5)'
@@ -299,12 +299,12 @@ const LoginPage = () => {
                   component={RouterLink}
                   to="/register"
                   sx={{ 
-                    color: '#667eea',
+                    color: '#0D9488',
                     fontWeight: 600, 
                     textDecoration: 'none',
                     transition: 'all 0.2s ease',
                     '&:hover': {
-                      color: '#5568d3',
+                      color: '#0D9488',
                       textDecoration: 'underline'
                     }
                   }}
@@ -325,7 +325,7 @@ const LoginPage = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
           color: 'white',
           p: { lg: 6, xl: 8 },
           position: 'relative',
@@ -384,7 +384,7 @@ const LoginPage = () => {
               borderRadius: '16px',
               boxShadow: '0 12px 40px rgba(0,0,0,0.2)'
             }}>
-              <BusinessCenterIcon sx={{ fontSize: 42, color: '#667eea' }} />
+              <BusinessCenterIcon sx={{ fontSize: 42, color: '#0D9488' }} />
             </Box>
           </Box>
           
