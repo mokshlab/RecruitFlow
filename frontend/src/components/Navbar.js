@@ -4,7 +4,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, Container, Avatar, IconButton, Menu, MenuItem } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import WorkIcon from '@mui/icons-material/Work';
+
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -37,27 +37,55 @@ const Navbar = () => {
       position="static" 
       elevation={0}
       sx={{ 
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
         borderBottom: '1px solid rgba(255,255,255,0.1)'
       }}
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ minHeight: '70px' }}>
-          <WorkIcon sx={{ fontSize: 32, mr: 1.5 }} />
-          <Typography 
-            variant="h5" 
-            component={Link} 
-            to="/" 
-            sx={{ 
-              flexGrow: 1, 
-              textDecoration: 'none', 
+          <Box
+            component={Link}
+            to="/"
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              textDecoration: 'none',
               color: 'inherit',
-              fontWeight: 700,
-              letterSpacing: '-0.5px'
+              flexGrow: 1,
+              gap: 1.5
             }}
           >
-            JobFinder
-          </Typography>
+            <Box
+              sx={{
+                width: 38,
+                height: 38,
+                borderRadius: '10px',
+                bgcolor: 'rgba(255,255,255,0.95)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: 900,
+                fontSize: '14px',
+                letterSpacing: '-0.5px',
+                color: '#0D9488',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+                flexShrink: 0,
+                fontFamily: 'Roboto, Arial, sans-serif'
+              }}
+            >
+              RF
+            </Box>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: 700,
+                letterSpacing: '-0.5px',
+                color: 'inherit'
+              }}
+            >
+              RecruitFlow
+            </Typography>
+          </Box>
 
           <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 0.5, sm: 1 } }}>
             {user ? (
