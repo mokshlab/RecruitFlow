@@ -1,4 +1,4 @@
-# Database Design - JobFinder Platform
+# Database Design - RecruitFlow Platform
 
 MongoDB database schema documentation using Mongoose ODM.
 

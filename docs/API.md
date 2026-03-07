@@ -1,6 +1,6 @@
-# API Reference - JobFinder Platform
+# API Reference - RecruitFlow Platform
 
-Complete REST API documentation for the JobFinder platform.
+Complete REST API documentation for the RecruitFlow Platform.
 
 **Base URL**: `https://your-backend-url.com/api`  
 **Authentication**: JWT Bearer Token

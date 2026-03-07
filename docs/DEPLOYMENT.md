@@ -1,6 +1,6 @@
-# Deployment Guide - JobFinder Platform
+# Deployment Guide - RecruitFlow Platform
 
-Step-by-step guide to deploy the JobFinder application to production.
+Step-by-step guide to deploy the RecruitFlow application to production.
 
 ---
 
@@ -92,7 +92,7 @@ Ensure `backend/package.json` has:
 2. Click **"New +"** → **"Web Service"**
 3. Connect your GitHub repository
 4. Configure:
-   - **Name**: `jobfinder-api` (or your choice)
+   - **Name**: `recruitflow-api` (or your choice)
    - **Region**: Closest to users
    - **Branch**: `main`
    - **Root Directory**: `backend`
@@ -128,13 +128,13 @@ openssl rand -hex 64
 
 1. Click **"Create Web Service"**
 2. Wait for deployment (3-5 minutes)
-3. Copy backend URL: `https://jobfinder-api.onrender.com`
+3. Copy backend URL: `https://recruitflow-api.onrender.com`
 
 ### 2.5 Verify Deployment
 
 ```bash
 # Test health endpoint
-curl https://jobfinder-api.onrender.com/api/health
+curl https://recruitflow-api.onrender.com/api/health
 
 # Should return:
 # {"status":"OK","timestamp":"...","database":"connected"}
@@ -172,8 +172,8 @@ curl https://jobfinder-api.onrender.com/api/health
 Click **"Environment Variables"**, add:
 
 ```env
-REACT_APP_API_URL=https://jobfinder-api.onrender.com
-REACT_APP_API_BASE_URL=https://jobfinder-api.onrender.com/api
+REACT_APP_API_URL=https://recruitflow-api.onrender.com
+REACT_APP_API_BASE_URL=https://recruitflow-api.onrender.com/api
 GENERATE_SOURCEMAP=false
 CI=true
 ```
@@ -187,7 +187,7 @@ CI=true
 
 1. Click **"Deploy"**
 2. Wait for build (2-3 minutes)
-3. Copy frontend URL: `https://jobfinder.vercel.app`
+3. Copy frontend URL: `https://recruitflow.vercel.app`
 
 ---
 
@@ -199,7 +199,7 @@ CI=true
 2. Click **"Environment"**
 3. Update `FRONTEND_URL` to your Vercel URL:
    ```
-   FRONTEND_URL=https://jobfinder.vercel.app
+   FRONTEND_URL=https://recruitflow.vercel.app
    ```
 4. Click **"Save Changes"**
 5. Service will auto-redeploy
@@ -240,7 +240,7 @@ CI=true
 
 ### 6.1 Test Frontend
 
-1. Visit `https://jobfinder.vercel.app`
+1. Visit `https://recruitflow.vercel.app`
 2. Verify homepage loads
 3. Test user registration
 4. Test login with demo credentials:
@@ -249,7 +249,7 @@ CI=true
 
 ### 6.2 Test Admin Panel
 
-1. Visit `https://jobfinder.vercel.app/admin-dashboard`
+1. Visit `https://recruitflow.vercel.app/admin-dashboard`
 2. Login with superadmin credentials:
    - Username: `admin`
    - Password: `<your-admin-password>`
@@ -325,14 +325,14 @@ CI=true
 ### For Vercel (Frontend)
 
 1. Go to Vercel project → **"Settings"** → **"Domains"**
-2. Add your custom domain: `jobfinder.yourdomain.com`
+2. Add your custom domain: `recruitflow.yourdomain.com`
 3. Configure DNS records as instructed
 4. Update `FRONTEND_URL` in Render
 
 ### For Render (Backend)
 
 1. Go to Render service → **"Settings"** → **"Custom Domain"**
-2. Add your custom domain: `api.jobfinder.yourdomain.com`
+2. Add your custom domain: `api.recruitflow.yourdomain.com`
 3. Configure DNS CNAME record
 4. Update `REACT_APP_API_URL` in Vercel
 
