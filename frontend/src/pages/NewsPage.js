@@ -7,7 +7,7 @@ import API from '../api';
 const styles = {
   container: {
     minHeight: '100vh',
-    backgroundColor: '#f3f4f6',
+    backgroundColor: '#FFFBEB',
     padding: '32px 16px',
   },
   maxWidthContainer: {
@@ -18,50 +18,72 @@ const styles = {
     textAlign: 'center',
     marginBottom: '32px',
   },
+  headerBanner: {
+    background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 60%, #F59E0B 100%)',
+    borderRadius: '16px',
+    padding: '36px 24px',
+    marginBottom: '28px',
+    position: 'relative',
+    overflow: 'hidden',
+    boxShadow: '0 8px 32px rgba(13, 148, 136, 0.2)',
+  },
+  headerBannerOverlay: {
+    position: 'absolute',
+    top: 0, left: 0, right: 0, bottom: 0,
+    background: 'radial-gradient(ellipse at top right, rgba(245,158,11,0.25) 0%, transparent 60%)',
+    pointerEvents: 'none',
+  },
   headerContent: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: '12px',
-    marginBottom: '16px',
+    marginBottom: '10px',
   },
   headerIcon: {
-    fontSize: '48px',
-    color: '#2563eb',
+    fontSize: '40px',
+    color: 'rgba(255,255,255,0.9)',
   },
   headerTitle: {
-    fontSize: '36px',
-    fontWeight: 'bold',
-    color: '#1f2937',
+    fontSize: '34px',
+    fontWeight: '800',
+    color: '#ffffff',
     margin: 0,
+    letterSpacing: '-0.5px',
   },
   headerSubtitle: {
-    color: '#6b7280',
+    color: 'rgba(255,255,255,0.85)',
     margin: 0,
+    fontSize: '15px',
+    fontWeight: '400',
   },
   categoryContainer: {
     display: 'flex',
     justifyContent: 'center',
-    gap: '12px',
+    gap: '10px',
     marginBottom: '32px',
     flexWrap: 'wrap',
   },
   categoryButton: {
-    padding: '8px 24px',
+    padding: '8px 22px',
     borderRadius: '50px',
-    fontWeight: '500',
-    border: 'none',
+    fontWeight: '600',
+    fontSize: '13px',
+    border: '2px solid transparent',
     cursor: 'pointer',
-    transition: 'all 0.3s',
+    transition: 'all 0.25s',
+    letterSpacing: '0.01em',
   },
   categoryButtonActive: {
-    backgroundColor: '#2563eb',
+    background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
     color: 'white',
-    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 4px 12px rgba(13, 148, 136, 0.35)',
+    borderColor: 'transparent',
   },
   categoryButtonInactive: {
     backgroundColor: 'white',
     color: '#374151',
+    borderColor: '#E5E7EB',
   },
   loadingContainer: {
     display: 'flex',
@@ -71,7 +93,7 @@ const styles = {
   },
   spinnerIcon: {
     fontSize: '48px',
-    color: '#2563eb',
+    color: '#0D9488',
     animation: 'spin 1s linear infinite',
   },
   errorContainer: {
@@ -90,13 +112,14 @@ const styles = {
   },
   newsCard: {
     backgroundColor: 'white',
-    borderRadius: '8px',
-    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+    borderRadius: '12px',
+    boxShadow: '0 2px 12px rgba(0, 0, 0, 0.07)',
     overflow: 'hidden',
     transition: 'all 0.3s',
     display: 'flex',
     flexDirection: 'row',
-    height: '250px',
+    height: '220px',
+    borderLeft: '4px solid #0D9488',
   },
   newsImage: {
     width: '33.333%',
@@ -107,7 +130,7 @@ const styles = {
   newsImagePlaceholder: {
     width: '33.333%',
     height: '100%',
-    background: 'linear-gradient(to bottom right, #60a5fa, #a78bfa)',
+    background: 'linear-gradient(to bottom right, #0D9488, #F59E0B)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -135,8 +158,11 @@ const styles = {
     color: '#6b7280',
   },
   sourceName: {
-    fontWeight: '600',
-    color: '#2563eb',
+    fontWeight: '700',
+    color: '#0D9488',
+    fontSize: '11px',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
   },
   dateRow: {
     display: 'flex',
@@ -171,11 +197,13 @@ const styles = {
     display: 'inline-flex',
     alignItems: 'center',
     gap: '6px',
-    color: '#2563eb',
-    fontWeight: '600',
+    color: '#0D9488',
+    fontWeight: '700',
     textDecoration: 'none',
-    transition: 'color 0.3s',
+    transition: 'color 0.2s',
     fontSize: '13px',
+    borderBottom: '2px solid #5EEAD4',
+    paddingBottom: '1px',
   },
   noNewsContainer: {
     textAlign: 'center',
@@ -242,14 +270,18 @@ const NewsPage = () => {
             to { transform: rotate(360deg); }
           }
           .news-card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(13, 148, 136, 0.15);
+            transform: translateY(-3px);
+            border-left-color: #F59E0B;
           }
           .category-btn-inactive:hover {
-            background-color: #dbeafe;
+            background-color: #CCFBF1;
+            border-color: #0D9488 !important;
+            color: #0D9488;
           }
           .read-more-link:hover {
-            color: #1e40af;
+            color: #F59E0B;
+            border-bottom-color: #F59E0B;
           }
           @media (min-width: 768px) {
             .news-grid {
@@ -267,11 +299,14 @@ const NewsPage = () => {
         <div style={styles.maxWidthContainer}>
           {/* Header */}
           <div style={styles.header}>
-            <div style={styles.headerContent}>
-              <FaNewspaper style={styles.headerIcon} />
-              <h1 style={styles.headerTitle}>Latest News</h1>
+            <div style={styles.headerBanner}>
+              <div style={styles.headerBannerOverlay} />
+              <div style={styles.headerContent}>
+                <FaNewspaper style={styles.headerIcon} />
+                <h1 style={styles.headerTitle}>Career Insights</h1>
+              </div>
+              <p style={styles.headerSubtitle}>Stay ahead — job market trends, industry shifts, and career growth stories</p>
             </div>
-            <p style={styles.headerSubtitle}>Stay updated with job market trends and career insights</p>
           </div>
 
           {/* Category Filter */}
