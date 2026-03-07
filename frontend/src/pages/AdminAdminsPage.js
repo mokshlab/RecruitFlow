@@ -161,7 +161,7 @@ const AdminAdminsPage = () => {
     return (
       <AdminLayout>
         <Box display="flex" justifyContent="center" alignItems="center" minHeight="60vh">
-          <CircularProgress size={60} sx={{ color: '#5568d3' }} />
+          <CircularProgress size={60} sx={{ color: '#F59E0B' }} />
         </Box>
       </AdminLayout>
     );
@@ -185,7 +185,7 @@ const AdminAdminsPage = () => {
               startIcon={<AddIcon />}
               onClick={() => setOpenDialog(true)}
               sx={{
-                background: 'linear-gradient(135deg, #5568d3 0%, #764ba2 100%)',
+                background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
                 textTransform: 'none',
                 fontWeight: 600,
                 px: 3,
@@ -230,7 +230,7 @@ const AdminAdminsPage = () => {
                   InputProps={{
                     startAdornment: (
                       <SearchIcon sx={{ 
-                        background: 'linear-gradient(135deg, #5568d3 0%, #764ba2 100%)',
+                        background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
@@ -247,10 +247,10 @@ const AdminAdminsPage = () => {
                         borderColor: 'rgba(0, 0, 0, 0.1)'
                       },
                       '&:hover fieldset': {
-                        borderColor: '#5568d3'
+                        borderColor: '#F59E0B'
                       },
                       '&.Mui-focused fieldset': {
-                        borderColor: '#5568d3'
+                        borderColor: '#F59E0B'
                       }
                     }
                   }}
@@ -291,8 +291,8 @@ const AdminAdminsPage = () => {
                         py: 1.5,
                         cursor: 'pointer',
                         userSelect: 'none',
-                        bgcolor: sortConfig.key === 'username' ? alpha('#5568d3', 0.08) : 'transparent',
-                        '&:hover': { bgcolor: alpha('#5568d3', 0.12) },
+                        bgcolor: sortConfig.key === 'username' ? alpha('#F59E0B', 0.08) : 'transparent',
+                        '&:hover': { bgcolor: alpha('#F59E0B', 0.12) },
                         transition: 'all 0.2s ease'
                       }}
                       onClick={() => handleSort('username')}
@@ -301,8 +301,8 @@ const AdminAdminsPage = () => {
                         Username
                         {sortConfig.key === 'username' && (
                           sortConfig.direction === 'asc' 
-                            ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#5568d3' }} />
-                            : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#5568d3' }} />
+                            ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
+                            : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
                         )}
                       </Box>
                     </TableCell>
@@ -316,8 +316,8 @@ const AdminAdminsPage = () => {
                         py: 1.5,
                         cursor: 'pointer',
                         userSelect: 'none',
-                        bgcolor: sortConfig.key === 'role' ? alpha('#5568d3', 0.08) : 'transparent',
-                        '&:hover': { bgcolor: alpha('#5568d3', 0.12) },
+                        bgcolor: sortConfig.key === 'role' ? alpha('#F59E0B', 0.08) : 'transparent',
+                        '&:hover': { bgcolor: alpha('#F59E0B', 0.12) },
                         transition: 'all 0.2s ease'
                       }}
                       onClick={() => handleSort('role')}
@@ -326,8 +326,8 @@ const AdminAdminsPage = () => {
                         Role
                         {sortConfig.key === 'role' && (
                           sortConfig.direction === 'asc' 
-                            ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#5568d3' }} />
-                            : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#5568d3' }} />
+                            ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
+                            : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
                         )}
                       </Box>
                     </TableCell>
@@ -339,7 +339,7 @@ const AdminAdminsPage = () => {
                     <TableRow
                       key={admin._id}
                       sx={{
-                        '&:hover': { bgcolor: alpha('#5568d3', 0.02) },
+                        '&:hover': { bgcolor: alpha('#F59E0B', 0.02) },
                         transition: 'background-color 0.2s ease'
                       }}
                     >
@@ -350,11 +350,11 @@ const AdminAdminsPage = () => {
                               width: 32,
                               height: 32,
                               bgcolor: admin.isDefault 
-                                ? 'linear-gradient(135deg, #5568d3 0%, #764ba2 100%)'
-                                : alpha('#5568d3', 0.1),
-                              color: admin.isDefault ? 'white' : '#5568d3',
+                                ? 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)'
+                                : alpha('#F59E0B', 0.1),
+                              color: admin.isDefault ? 'white' : '#F59E0B',
                               fontWeight: 700,
-                              border: admin.isDefault ? '2px solid #5568d3' : 'none'
+                              border: admin.isDefault ? '2px solid #F59E0B' : 'none'
                             }}
                           >
                             {admin.isDefault ? <ShieldIcon /> : admin.username?.charAt(0).toUpperCase()}
@@ -373,7 +373,7 @@ const AdminAdminsPage = () => {
                             size="small"
                             icon={<ShieldIcon />}
                             sx={{
-                              background: 'linear-gradient(135deg, #5568d3 0%, #764ba2 100%)',
+                              background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
                               color: 'white',
                               fontWeight: 700,
                               borderRadius: 1.5
@@ -385,8 +385,8 @@ const AdminAdminsPage = () => {
                             size="small"
                             icon={<AdminIcon />}
                             sx={{
-                              bgcolor: alpha('#5568d3', 0.1),
-                              color: '#5568d3',
+                              bgcolor: alpha('#F59E0B', 0.1),
+                              color: '#F59E0B',
                               fontWeight: 600,
                               borderRadius: 1.5
                             }}
@@ -448,14 +448,14 @@ const AdminAdminsPage = () => {
                     display: 'inline-flex',
                     p: 3,
                     borderRadius: '50%',
-                    background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)',
+                    background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%)',
                     mb: 3
                   }}
                 >
                   <AdminIcon 
                     sx={{ 
                       fontSize: 64, 
-                      background: 'linear-gradient(135deg, #5568d3 0%, #764ba2 100%)',
+                      background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text'
@@ -526,7 +526,7 @@ const AdminAdminsPage = () => {
               variant="contained"
               disabled={creating}
               sx={{
-                background: 'linear-gradient(135deg, #5568d3 0%, #764ba2 100%)',
+                background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
                 textTransform: 'none',
                 fontWeight: 600,
                 px: 3,

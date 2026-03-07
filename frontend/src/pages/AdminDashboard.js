@@ -82,8 +82,8 @@ const AdminDashboard = () => {
       title: 'Total Admins', 
       value: stats?.totalAdmins || 0, 
       icon: <AdminIcon sx={{ fontSize: 40 }} />,
-      gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      color: '#667eea'
+      gradient: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+      color: '#F59E0B'
     },
     { 
       title: 'Total Jobs', 
@@ -112,7 +112,7 @@ const AdminDashboard = () => {
     return (
       <AdminLayout>
         <Box display="flex" justifyContent="center" alignItems="center" minHeight="60vh">
-          <CircularProgress size={60} sx={{ color: '#667eea' }} />
+          <CircularProgress size={60} sx={{ color: '#F59E0B' }} />
         </Box>
       </AdminLayout>
     );
@@ -219,13 +219,13 @@ const AdminDashboard = () => {
                 size="small"
                 onClick={() => navigate('/admin-jobs')}
                 sx={{
-                  borderColor: '#667eea',
-                  color: '#667eea',
+                  borderColor: '#F59E0B',
+                  color: '#F59E0B',
                   textTransform: 'none',
                   fontWeight: 600,
                   '&:hover': {
-                    borderColor: '#764ba2',
-                    bgcolor: alpha('#667eea', 0.04)
+                    borderColor: '#F97316',
+                    bgcolor: alpha('#F59E0B', 0.04)
                   }
                 }}
               >
@@ -250,7 +250,7 @@ const AdminDashboard = () => {
                       <TableRow 
                         key={job._id} 
                         sx={{ 
-                          '&:hover': { bgcolor: alpha('#667eea', 0.02) },
+                          '&:hover': { bgcolor: alpha('#F59E0B', 0.02) },
                           transition: 'background-color 0.2s ease'
                         }}
                       >
@@ -262,7 +262,7 @@ const AdminDashboard = () => {
                         <TableCell>{job.companyName}</TableCell>
                         <TableCell>{job.location}</TableCell>
                         <TableCell>
-                          <Typography fontWeight={600} color="#667eea">
+                          <Typography fontWeight={600} color="#F59E0B">
                             ₹{job.salary?.toLocaleString('en-IN')}
                           </Typography>
                         </TableCell>
@@ -271,8 +271,8 @@ const AdminDashboard = () => {
                             label={job.applicants?.length || 0}
                             size="small"
                             sx={{
-                              bgcolor: alpha('#667eea', 0.1),
-                              color: '#667eea',
+                              bgcolor: alpha('#F59E0B', 0.1),
+                              color: '#F59E0B',
                               fontWeight: 600
                             }}
                           />
