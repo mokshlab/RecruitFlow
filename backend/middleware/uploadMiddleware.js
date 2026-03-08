@@ -84,7 +84,18 @@ const uploadToGridFS = (file, fieldname) => {
         logger.warn(`File size limit exceeded: ${file.size} > ${maxSize}`);
         return reject(new Error(`File size exceeds limit of ${maxSize / (1024 * 1024)}MB`));
       }
-      
+
+      // Validate magic bytes (file signature) to prevent MIME spoofing
+      const signature = constants.FILE_SIGNATURES[file.mimetype];
+      if (signature) {
+        const actualBytes = Array.from(file.buffer.slice(0, signature.length));
+        const signatureMatch = signature.every((byte, i) => actualBytes[i] === byte);
+        if (!signatureMatch) {
+          logger.warn(`Magic bytes mismatch for ${file.mimetype}: ${actualBytes.map(b => `0x${b.toString(16).toUpperCase()}`).join(', ')}`);
+          return reject(new Error('File content does not match declared file type'));
+        }
+      }
+
       const filename = `${fieldname}-${Date.now()}${path.extname(file.originalname)}`;
       
       logger.info(`Uploading to GridFS: ${filename} (${(file.size / 1024).toFixed(2)} KB)`);
