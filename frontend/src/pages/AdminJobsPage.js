@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import API from '../api';
+import { useAuth } from '../context/AuthContext';
 import {
   Box,
   Typography,
@@ -68,6 +69,7 @@ const AdminJobsPage = () => {
   const [validationErrors, setValidationErrors] = useState({});
   const [touched, setTouched] = useState({});
   const navigate = useNavigate();
+  const { admin } = useAuth();
 
   useEffect(() => {
     fetchJobs();
@@ -613,6 +615,7 @@ const AdminJobsPage = () => {
                             >
                               <ViewIcon fontSize="small" />
                             </IconButton>
+                            {admin?.isDefault && (
                             <IconButton
                               size="small"
                               onClick={() => handleDelete(job._id)}
@@ -631,6 +634,7 @@ const AdminJobsPage = () => {
                             >
                               <DeleteIcon fontSize="small" />
                             </IconButton>
+                            )}
                           </Box>
                         </TableCell>
                       </TableRow>

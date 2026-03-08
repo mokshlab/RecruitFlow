@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import API from '../api';
 import PdfViewer from '../components/PdfViewer';
+import { useAuth } from '../context/AuthContext';
 import {
   Box,
   Typography,
@@ -44,6 +45,7 @@ const AdminUsersPage = () => {
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [pdfViewerOpen, setPdfViewerOpen] = useState(false);
   const [selectedPdf, setSelectedPdf] = useState({ url: '', name: '' });
+  const { admin } = useAuth();
 
   useEffect(() => {
     fetchUsers();
@@ -410,6 +412,7 @@ const AdminUsersPage = () => {
                           )}
                         </TableCell>
                         <TableCell sx={{ py: 1 }}>
+                          {admin?.isDefault && (
                           <IconButton
                             size="small"
                             onClick={() => handleDelete(user._id)}
@@ -423,6 +426,7 @@ const AdminUsersPage = () => {
                           >
                             <DeleteIcon fontSize="small" />
                           </IconButton>
+                          )}
                         </TableCell>
                       </TableRow>
                     ))

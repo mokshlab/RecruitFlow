@@ -35,7 +35,7 @@ router.delete('/admins/:id', authAdmin, isDefaultAdmin, validateAdminId, deleteA
 
 // User management
 router.get('/users', authAdmin, getAllUsers);
-router.delete('/users/:id', authAdmin, deleteUser);
+router.delete('/users/:id', authAdmin, isDefaultAdmin, deleteUser);
 
 // Applicant management
 router.get('/jobs/:jobId/applicants', authAdmin, validateJobIdForApplicants, getJobApplicants);
@@ -44,7 +44,7 @@ router.patch('/jobs/:jobId/applicants/:applicantId/status', authAdmin, updateApp
 // Job management
 router.get('/jobs', authAdmin, getAllJobs);
 router.post('/jobs', authAdmin, validateJob, postJob);
-router.delete('/jobs/:id', authAdmin, validateJobId, deleteJob);
+router.delete('/jobs/:id', authAdmin, isDefaultAdmin, validateJobId, deleteJob);
 router.put('/jobs/:id', authAdmin, validateJobId, validateJob, updateJob);
 
 module.exports = router;
