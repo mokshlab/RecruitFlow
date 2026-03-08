@@ -28,7 +28,6 @@ const userSchema = new mongoose.Schema({
 });
 
 // Indexes for performance optimization
-userSchema.index({ email: 1 }, { unique: true }); // Explicit unique index for email lookups
 userSchema.index({ experience: 1 }); // For filtering users by experience
 userSchema.index({ skills: 1 }); // For searching users by skills
 userSchema.index({ isDeleted: 1 }); // For filtering active/deleted users

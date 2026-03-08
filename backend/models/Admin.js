@@ -6,7 +6,6 @@ const adminSchema = new mongoose.Schema({
 });
 
 // Indexes for performance optimization
-adminSchema.index({ username: 1 }, { unique: true }); // Explicit unique index for username
 adminSchema.index({ isDefault: 1 }); // For finding default admin quickly
 
 // Compound index for admin login queries
