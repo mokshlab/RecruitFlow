@@ -39,6 +39,22 @@ const getMockNews = (category) => {
         urlToImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800",
         publishedAt: new Date(Date.now() - 259200000).toISOString(),
         source: { name: "AI Careers Weekly" }
+      },
+      {
+        title: "Cybersecurity Talent Gap Widens: 3.5 Million Positions Unfilled Globally",
+        description: "Organizations urgently hiring security analysts, penetration testers, and incident responders as cyber threats escalate across industries.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
+        publishedAt: new Date(Date.now() - 345600000).toISOString(),
+        source: { name: "CyberSec Jobs Report" }
+      },
+      {
+        title: "Full Stack Developers Remain Most Hired Role for Third Consecutive Year",
+        description: "Versatility drives demand as companies prefer engineers who can work across frontend, backend, and cloud infrastructure layers.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
+        publishedAt: new Date(Date.now() - 432000000).toISOString(),
+        source: { name: "Developer Hiring Trends" }
       }
     ],
     business: [
@@ -65,6 +81,22 @@ const getMockNews = (category) => {
         urlToImage: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800",
         publishedAt: new Date(Date.now() - 172800000).toISOString(),
         source: { name: "Job Market Analytics" }
+      },
+      {
+        title: "Startups Compete for Talent With Equity Packages and Flexible Perks",
+        description: "Early-stage companies offering creative compensation structures including stock options, remote-first policies, and professional development budgets.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800",
+        publishedAt: new Date(Date.now() - 259200000).toISOString(),
+        source: { name: "Startup Hiring Digest" }
+      },
+      {
+        title: "Corporate Training Budgets Hit Record High as Firms Prioritize Retention",
+        description: "Companies investing $1,300 per employee annually on professional development, recognizing that upskilling reduces costly turnover.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800",
+        publishedAt: new Date(Date.now() - 345600000).toISOString(),
+        source: { name: "Business Workforce Report" }
       }
     ],
     general: [
@@ -91,6 +123,30 @@ const getMockNews = (category) => {
         urlToImage: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800",
         publishedAt: new Date(Date.now() - 172800000).toISOString(),
         source: { name: "Learning & Growth" }
+      },
+      {
+        title: "LinkedIn Tips: How to Optimize Your Profile for Recruiter Searches",
+        description: "Industry experts reveal the keywords, headline formats, and profile sections that attract the most recruiter interest in 2025.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=800",
+        publishedAt: new Date(Date.now() - 259200000).toISOString(),
+        source: { name: "Career Strategy Hub" }
+      },
+      {
+        title: "Freelancing Grows 25%: More Professionals Choose Independent Careers",
+        description: "Contract and gig work appeal rises as professionals value autonomy, with tech consulting and design leading freelance categories.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800",
+        publishedAt: new Date(Date.now() - 345600000).toISOString(),
+        source: { name: "Independent Work Report" }
+      },
+      {
+        title: "Interview Trends: Companies Shift Toward Skills-Based Assessments",
+        description: "Traditional resume screening gives way to practical tests and portfolio reviews as employers focus on demonstrated ability over credentials.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800",
+        publishedAt: new Date(Date.now() - 432000000).toISOString(),
+        source: { name: "Hiring Innovation Weekly" }
       }
     ],
     health: [
@@ -109,6 +165,22 @@ const getMockNews = (category) => {
         urlToImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800",
         publishedAt: new Date(Date.now() - 86400000).toISOString(),
         source: { name: "Wellness at Work" }
+      },
+      {
+        title: "Telehealth Expansion Creates New Roles for Medical Technologists",
+        description: "Remote healthcare delivery platforms hiring IT specialists, patient coordinators, and digital health analysts at unprecedented rates.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800",
+        publishedAt: new Date(Date.now() - 172800000).toISOString(),
+        source: { name: "Digital Health Careers" }
+      },
+      {
+        title: "Pharmaceutical Industry Hiring Boom: Clinical Research Roles Up 40%",
+        description: "Drug development pipelines expanding post-pandemic, driving demand for clinical trial managers, regulatory affairs specialists, and biostatisticians.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800",
+        publishedAt: new Date(Date.now() - 259200000).toISOString(),
+        source: { name: "Pharma Workforce Insights" }
       }
     ],
     science: [
@@ -127,6 +199,22 @@ const getMockNews = (category) => {
         urlToImage: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800",
         publishedAt: new Date(Date.now() - 86400000).toISOString(),
         source: { name: "Green Jobs Network" }
+      },
+      {
+        title: "Data Science Careers Transform Every Industry From Finance to Agriculture",
+        description: "Demand for data scientists grows 35% as organizations across all sectors harness analytics for decision-making and innovation.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+        publishedAt: new Date(Date.now() - 172800000).toISOString(),
+        source: { name: "Science & Technology Careers" }
+      },
+      {
+        title: "Space Industry Jobs Take Off: Private Sector Hiring Engineers and Scientists",
+        description: "Commercial space companies creating thousands of positions in propulsion engineering, satellite operations, and aerospace research.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800",
+        publishedAt: new Date(Date.now() - 259200000).toISOString(),
+        source: { name: "Aerospace Careers Network" }
       }
     ],
     sports: [
@@ -145,6 +233,22 @@ const getMockNews = (category) => {
         urlToImage: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800",
         publishedAt: new Date(Date.now() - 86400000).toISOString(),
         source: { name: "Fitness Careers Today" }
+      },
+      {
+        title: "Sports Analytics Revolution Opens Doors for Data-Savvy Professionals",
+        description: "Teams and leagues investing heavily in performance analytics, creating roles for statisticians and machine learning specialists in sports.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=800",
+        publishedAt: new Date(Date.now() - 172800000).toISOString(),
+        source: { name: "Sports Data Weekly" }
+      },
+      {
+        title: "Esports Organizations Hiring: From Coaches to Brand Partnership Managers",
+        description: "Competitive gaming industry grows into a billion-dollar market, with professional opportunities expanding far beyond player rosters.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800",
+        publishedAt: new Date(Date.now() - 259200000).toISOString(),
+        source: { name: "Esports Career Insider" }
       }
     ],
     entertainment: [
@@ -163,6 +267,22 @@ const getMockNews = (category) => {
         urlToImage: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800",
         publishedAt: new Date(Date.now() - 86400000).toISOString(),
         source: { name: "Gaming Careers Network" }
+      },
+      {
+        title: "Streaming Platforms Hire Thousands for Content Moderation and Curation",
+        description: "Netflix, Spotify, and emerging platforms expand teams focused on content quality, user experience, and regional programming.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=800",
+        publishedAt: new Date(Date.now() - 172800000).toISOString(),
+        source: { name: "Media Industry Careers" }
+      },
+      {
+        title: "Film and TV Production Crews in Short Supply as Content Boom Continues",
+        description: "Behind-the-scenes professionals including editors, sound engineers, and production assistants enjoy strong demand and rising day rates.",
+        url: "#",
+        urlToImage: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800",
+        publishedAt: new Date(Date.now() - 259200000).toISOString(),
+        source: { name: "Entertainment Workforce" }
       }
     ]
   };

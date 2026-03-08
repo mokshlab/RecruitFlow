@@ -2,15 +2,6 @@
 
 Node.js/Express REST API server for the RecruitFlow job portal with real-time WebSocket support.
 
-## Quick Start
-
-```bash
-npm install
-# Create .env in project root with MONGO_URI, JWT_SECRET, etc.
-node config/seedDatabase.js  # Seed demo data
-npm start  # Server runs on http://localhost:5000
-```
-
 ## Tech Stack
 
 **Runtime:** Node.js v16+ • Express.js 4.21.2 • MongoDB 5.0+ (Mongoose 8.18.2)  

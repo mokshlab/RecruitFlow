@@ -13,7 +13,11 @@ A production-deployed, full-stack job portal with a two-sided platform: a candid
 - **Candidate Portal:** [https://recruit-flow-five.vercel.app](https://recruit-flow-five.vercel.app)
 - **Recruiter Dashboard:** [https://recruit-flow-five.vercel.app/admin-dashboard](https://recruit-flow-five.vercel.app/admin-dashboard)
 
-> Demo credentials are available on request -- contact details below.
+**Demo Credentials:**
+| Role | Login | Password |
+|---|---|---|
+| Candidate | `demo.user@example.com` | `Demo$456` |
+| Admin | `testadmin` | `Check#2026` |
 
 ---
 

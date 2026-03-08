@@ -1,7 +1,7 @@
 // src/pages/NewsPage.js
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { FaNewspaper, FaExternalLinkAlt, FaCalendarAlt, FaSpinner } from 'react-icons/fa';
+import { FaNewspaper, FaExternalLinkAlt, FaSpinner } from 'react-icons/fa';
 import API from '../api';
 
 const styles = {
@@ -164,11 +164,6 @@ const styles = {
     textTransform: 'uppercase',
     letterSpacing: '0.05em',
   },
-  dateRow: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '4px',
-  },
   cardTitle: {
     fontSize: '16px',
     fontWeight: 'bold',
@@ -243,15 +238,6 @@ const NewsPage = () => {
   useEffect(() => {
     fetchNews();
   }, [fetchNews]);
-
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-    });
-  };
 
   const categories = [
     { value: 'technology', label: 'Tech Jobs' },
@@ -357,10 +343,6 @@ const NewsPage = () => {
                     <div style={styles.sourceRow}>
                       <span style={styles.sourceName}>
                         {article.source.name}
-                      </span>
-                      <span style={styles.dateRow}>
-                        <FaCalendarAlt />
-                        {formatDate(article.publishedAt)}
                       </span>
                     </div>
 
