@@ -241,10 +241,10 @@ const HomePage = () => {
       {/* Hero Section - F-Pattern Layout with Visual Hierarchy */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 50%, #0D9488 100%)',
+          background: 'linear-gradient(135deg, #E8920C 0%, #C67A08 50%, #0D9488 100%)',
           color: 'white',
-          pt: { xs: 8, sm: 10, md: 14 },
-          pb: { xs: 10, sm: 12, md: 16 },
+          pt: { xs: 5, sm: 6, md: 8 },
+          pb: { xs: 3, sm: 4, md: 5 },
           position: 'relative',
           overflow: 'hidden',
           '&::before': {
@@ -263,7 +263,7 @@ const HomePage = () => {
             bottom: 0,
             left: 0,
             right: 0,
-            height: '80px',
+            height: '0px',
             background: 'linear-gradient(to top, #FFFBEB, transparent)'
           }
         }}
@@ -317,7 +317,7 @@ const HomePage = () => {
                     {/* Urgency Badge - Attention Grabbing */}
                     <Chip
                       icon={<TrendingUpIcon sx={{ fontSize: 18 }} />}
-                      label={`${Math.min(jobs.length, 6)} new jobs available`}
+                      label="New jobs available"
                       sx={{
                         bgcolor: 'rgba(255,215,0,0.95)',
                         color: '#1a1a2e',
@@ -377,7 +377,7 @@ const HomePage = () => {
                       maxWidth: '600px'
                     }}
                   >
-                    Discover {jobs.length} verified opportunities from India's top companies.
+                    Discover verified opportunities from India's top companies.
                     Apply in minutes, track real-time.
                   </Typography>
                   
@@ -404,7 +404,7 @@ const HomePage = () => {
                       </Box>
                       <Box>
                         <Typography variant="h5" sx={{ fontWeight: 700, lineHeight: 1.2 }}>
-                          {jobs.length}+
+                          9+
                         </Typography>
                         <Typography variant="caption" sx={{ opacity: 0.9, fontSize: '0.85rem' }}>
                           Active Jobs
@@ -467,7 +467,7 @@ const HomePage = () => {
             </Grid>
             
             {/* Trust Indicators - Right side */}
-            <Grid item xs={12} md={5}>
+            <Grid size={{ xs: 12, md: 5 }}>
               <Fade in timeout={1000}>
                 <Paper
                   elevation={0}
@@ -568,7 +568,7 @@ const HomePage = () => {
           </Grid>
 
           {/* Hero Search Bar */}
-          <Box sx={{ mt: { xs: 5, md: 6 }, position: 'relative', zIndex: 2 }}>
+          <Box sx={{ mt: { xs: 3, md: 4 }, position: 'relative', zIndex: 2 }}>
             <Paper
               elevation={0}
               sx={{
@@ -633,42 +633,16 @@ const HomePage = () => {
         </Container>
       </Box>
 
-      {/* Trust Stats Strip */}
-      <Box sx={{ bgcolor: 'white', borderBottom: '1px solid', borderColor: '#E5E7EB', py: { xs: 2.5, sm: 3 } }}>
-        <Container>
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            justifyContent="center"
-            alignItems="center"
-            spacing={{ xs: 2, sm: 0 }}
-            divider={
-              <Box sx={{ display: { xs: 'none', sm: 'block' }, width: '1px', height: 24, bgcolor: '#E5E7EB', mx: 4 }} />
-            }
-          >
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
-              <CheckCircleIcon sx={{ color: '#0D9488', fontSize: 20 }} />
-              <Typography variant="body2" sx={{ fontWeight: 600, color: '#1C1917' }}>100% Verified Listings</Typography>
-            </Box>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
-              <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: '#0D9488', animation: 'pulse 2s infinite', '@keyframes pulse': { '0%, 100%': { opacity: 1 }, '50%': { opacity: 0.4 } } }} />
-              <Typography variant="body2" sx={{ fontWeight: 600, color: '#1C1917' }}>Real-time Application Tracking</Typography>
-            </Box>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
-              <SpeedIcon sx={{ color: '#F59E0B', fontSize: 20 }} />
-              <Typography variant="body2" sx={{ fontWeight: 600, color: '#1C1917' }}>Apply in Under 2 Minutes</Typography>
-            </Box>
-          </Stack>
-        </Container>
-      </Box>
 
-      {/* Jobs Section */
-      <Container maxWidth={false} sx={{ py: { xs: 8, sm: 10, md: 12 }, px: { xs: 2, sm: 3, md: 4 } }}>
+
+      {/* Jobs Section */}
+      <Container maxWidth={false} sx={{ pt: { xs: 2, sm: 2.5, md: 3 }, pb: { xs: 4, sm: 5, md: 6 }, px: { xs: 2, sm: 3, md: 4 } }}>
         {/* Section Header with Progressive Disclosure */}
         <Box sx={{ 
           display: 'flex', 
           justifyContent: 'space-between', 
           alignItems: { xs: 'flex-start', sm: 'center' },
-          mb: 4,
+          mb: 3,
           flexDirection: { xs: 'column', sm: 'row' },
           gap: 2
         }}>
@@ -773,7 +747,7 @@ const HomePage = () => {
 
               {/* Row 2: Filters */}
               <Grid container spacing={2}>
-                <Grid item xs={12} sm={3}>
+                <Grid size={{ xs: 12, sm: 3 }}>
                   <TextField
                     fullWidth
                     select
@@ -813,7 +787,7 @@ const HomePage = () => {
                     <MenuItem value={7}>7+ years</MenuItem>
                   </TextField>
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid size={{ xs: 12, sm: 3 }}>
                   <TextField
                     fullWidth
                     label="Location"
@@ -836,7 +810,7 @@ const HomePage = () => {
                     }}
                   />
                 </Grid>
-                <Grid item xs={6} sm={3}>
+                <Grid size={{ xs: 6, sm: 3 }}>
                   <TextField
                     fullWidth
                     label="Min Salary (LPA)"
@@ -859,7 +833,7 @@ const HomePage = () => {
                     }}
                   />
                 </Grid>
-                <Grid item xs={6} sm={3}>
+                <Grid size={{ xs: 6, sm: 3 }}>
                   <TextField
                     fullWidth
                     label="Max Salary (LPA)"
@@ -992,7 +966,7 @@ const HomePage = () => {
         {loading ? (
           <Grid container spacing={4}>
             {[1, 2, 3, 4, 5, 6].map((item) => (
-              <Grid item xs={12} sm={6} md={4} key={item}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item}>
                 <JobCardSkeleton />
               </Grid>
             ))}
@@ -1063,10 +1037,7 @@ const HomePage = () => {
           <Grid container spacing={4}>
             {filteredJobs.map((job, index) => (
               <Grid 
-                item 
-                xs={12} 
-                sm={6} 
-                md={4} 
+                size={{ xs: 12, sm: 6, md: 4 }}
                 key={job._id}
               >
                 <Box>
