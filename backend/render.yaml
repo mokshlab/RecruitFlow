@@ -24,7 +24,7 @@ services:
       - key: DEFAULT_ADMIN_PASSWORD
         sync: false # Set this in Render dashboard (encrypted)
       - key: FRONTEND_URL
-        value: https://your-app.vercel.app # Update with actual Vercel URL
+        value: https://recruit-flow-five.vercel.app
     
     # Health check endpoint
     healthCheckPath: /api/health

@@ -10,8 +10,8 @@
 A production-deployed, full-stack job portal with a two-sided platform: a candidate-facing portal and a separate recruiter/admin dashboard -- connected via real-time WebSocket events.
 
 **Live Demo:**
-- **Candidate Portal:** [https://recruitflow.vercel.app](https://recruitflow.vercel.app)
-- **Recruiter Dashboard:** [https://recruitflow.vercel.app/admin-dashboard](https://recruitflow.vercel.app/admin-dashboard)
+- **Candidate Portal:** [https://recruit-flow-five.vercel.app](https://recruit-flow-five.vercel.app)
+- **Recruiter Dashboard:** [https://recruit-flow-five.vercel.app/admin-dashboard](https://recruit-flow-five.vercel.app/admin-dashboard)
 
 > Demo credentials are available on request -- contact details below.
 
