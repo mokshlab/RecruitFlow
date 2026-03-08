@@ -8,7 +8,7 @@
 // - Bookmark data to demonstrate user engagement features
 // 
 // DEMO PASSWORDS: Sample users use 'User@1234', demo user uses 'Demo$456' (intended for public demo)
-// ADMIN PASSWORDS: Superadmin (admin) set via DEFAULT_ADMIN_PASSWORD, normal admin (testadmin) uses 'Check#2026'
+// ADMIN: Superadmin credentials read from env vars (DEFAULT_ADMIN_USERNAME / DEFAULT_ADMIN_PASSWORD)
 // 
 // Usage: node backend/config/seedDatabase.js
 // Note: This clears existing data except the default admin account
@@ -292,8 +292,14 @@ async function seedDatabase() {
       adminId = savedAdmin._id;
       console.log(`✅ Default superadmin created: ${process.env.DEFAULT_ADMIN_USERNAME}\n`);
     } else {
+      // Update password and username in case env vars changed
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(process.env.DEFAULT_ADMIN_PASSWORD, salt);
+      existingSuperAdmin.username = process.env.DEFAULT_ADMIN_USERNAME;
+      existingSuperAdmin.password = hashedPassword;
+      await existingSuperAdmin.save();
       adminId = existingSuperAdmin._id;
-      console.log(`✅ Default superadmin already exists: ${existingSuperAdmin.username}\n`);
+      console.log(`\u2705 Default superadmin updated: ${process.env.DEFAULT_ADMIN_USERNAME}\n`);
     }
 
     // Create testadmin (normal admin without superadmin privileges)
@@ -342,12 +348,23 @@ async function seedDatabase() {
     const daysAgo = (days) => new Date(now.getTime() - (days * 24 * 60 * 60 * 1000));
     
     // Demo User (User 0) - Primary test user with 7 YOE, senior developer
-    // Job 0: Senior Full Stack - Infosys (Under Review 3 days ago)
+    // Applied to 4 jobs showing all status types for feature demonstration
+    
+    // Job 0: Senior Full Stack - Infosys (Shortlisted 5 days ago)
     await Job.findByIdAndUpdate(createdJobs[0]._id, {
+      $push: { applicants: { userId: createdUsers[0]._id, status: 'Shortlisted', appliedAt: daysAgo(5) } }
+    });
+    await User.findByIdAndUpdate(createdUsers[0]._id, {
+      $push: { appliedJobs: { jobId: createdJobs[0]._id, status: 'Shortlisted', appliedAt: daysAgo(5) } }
+    });
+    applicationCount++;
+
+    // Job 4: DevOps Engineer - Amazon (Under Review 3 days ago)
+    await Job.findByIdAndUpdate(createdJobs[4]._id, {
       $push: { applicants: { userId: createdUsers[0]._id, status: 'Under Review', appliedAt: daysAgo(3) } }
     });
     await User.findByIdAndUpdate(createdUsers[0]._id, {
-      $push: { appliedJobs: { jobId: createdJobs[0]._id, status: 'Under Review', appliedAt: daysAgo(3) } }
+      $push: { appliedJobs: { jobId: createdJobs[4]._id, status: 'Under Review', appliedAt: daysAgo(3) } }
     });
     applicationCount++;
 
@@ -357,6 +374,15 @@ async function seedDatabase() {
     });
     await User.findByIdAndUpdate(createdUsers[0]._id, {
       $push: { appliedJobs: { jobId: createdJobs[7]._id, status: 'Pending', appliedAt: daysAgo(1) } }
+    });
+    applicationCount++;
+
+    // Job 2: React Native - Paytm (Rejected 7 days ago)
+    await Job.findByIdAndUpdate(createdJobs[2]._id, {
+      $push: { applicants: { userId: createdUsers[0]._id, status: 'Rejected', appliedAt: daysAgo(7) } }
+    });
+    await User.findByIdAndUpdate(createdUsers[0]._id, {
+      $push: { appliedJobs: { jobId: createdJobs[2]._id, status: 'Rejected', appliedAt: daysAgo(7) } }
     });
     applicationCount++;
 
@@ -397,9 +423,9 @@ async function seedDatabase() {
 
     // Demo User (User 0) - Primary test user bookmarks senior roles
     await User.findByIdAndUpdate(createdUsers[0]._id, {
-      $push: { bookmarkedJobs: { $each: [createdJobs[7]._id, createdJobs[8]._id] } }
+      $push: { bookmarkedJobs: { $each: [createdJobs[1]._id, createdJobs[7]._id, createdJobs[8]._id] } }
     });
-    bookmarkCount += 2;
+    bookmarkCount += 3;
 
     // Dhanush (User 1) - Fresher bookmarks entry-level opportunities
     await User.findByIdAndUpdate(createdUsers[1]._id, {
@@ -430,7 +456,7 @@ async function seedDatabase() {
     console.log(`   Admin: ${process.env.DEFAULT_ADMIN_USERNAME}`);
     console.log('\nTest Credentials:');
     console.log(`   User: demo.user@example.com / Demo$456`);
-    console.log(`   Superadmin: ${process.env.DEFAULT_ADMIN_USERNAME} / ${process.env.DEFAULT_ADMIN_PASSWORD}`);
+    console.log(`   Superadmin: ${process.env.DEFAULT_ADMIN_USERNAME} / ******* (from env)`);
     console.log(`   Admin: testadmin / Check#2026\n`);
 
     mongoose.disconnect();
