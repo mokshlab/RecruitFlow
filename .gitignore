@@ -1,15 +1,14 @@
-# JobFinder - MERN Stack Learning Project
-# Protects sensitive data while keeping demo/learning files visible
+# RecruitFlow — MERN Stack Project
+# All environment variable files are local-only. Never push them.
+# Set env vars in your host's dashboard: Render (backend) and Vercel (frontend).
 
 # ============================================================================
-# SECRETS & ENVIRONMENT VARIABLES
+# ENVIRONMENT VARIABLES (all ignored — set on hosts, kept local only)
 # ============================================================================
 .env
-.env.local
-.env.production
-.env.*.local
-/backend/.env
-/frontend/.env
+.env.*
+**/.env
+**/.env.*
 
 # ============================================================================
 # DEPENDENCIES
@@ -51,7 +50,6 @@ uploads/
 *.bak
 *~
 .cache/
-MANUAL_TESTING_GUIDE.md
 
 # ============================================================================
 # IDE SETTINGS
