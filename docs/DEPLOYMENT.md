@@ -66,7 +66,7 @@ GitHub Repo → Vercel (Frontend) + Render (Backend) → MongoDB Atlas
    mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
    ```
 5. Replace `<username>` and `<password>` with your database user credentials
-6. Add database name: `mongodb+srv://user:pass@cluster0.xxxxx.mongodb.net/job_portal_db?retryWrites=true&w=majority`
+6. Add database name: `mongodb+srv://user:pass@cluster0.xxxxx.mongodb.net/recruit_flow_db?retryWrites=true&w=majority`
 
 ---
 
@@ -108,7 +108,7 @@ Click **"Advanced"** → **"Add Environment Variable"**, add:
 ```env
 NODE_ENV=production
 PORT=5000
-MONGO_URI=mongodb+srv://user:pass@cluster0.xxxxx.mongodb.net/job_portal_db?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://user:pass@cluster0.xxxxx.mongodb.net/recruit_flow_db?retryWrites=true&w=majority
 JWT_SECRET=<generate-random-64-char-string>
 DEFAULT_ADMIN_USERNAME=admin
 DEFAULT_ADMIN_PASSWORD=<secure-password-min-12-chars>

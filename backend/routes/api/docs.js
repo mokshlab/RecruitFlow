@@ -7,7 +7,7 @@ const constants = require('../../config/constants');
 
 router.get('/', (req, res) => {
   res.json({
-    name: 'JobFinder API',
+    name: 'RecruitFlow API',
     version: '1.2.0',
     description: 'Full-stack job portal with real-time notifications and dual authentication',
     baseUrl: '/api',
