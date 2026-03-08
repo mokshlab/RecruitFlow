@@ -38,11 +38,11 @@
     }
   ],
   "env": {
-    "REACT_APP_API_BASE_URL": "https://jobfinder-h4r1.onrender.com/api"
+    "REACT_APP_API_BASE_URL": "https://recruit-flow-backend.onrender.com/api"
   },
   "build": {
     "env": {
-      "REACT_APP_API_BASE_URL": "https://jobfinder-h4r1.onrender.com/api"
+      "REACT_APP_API_BASE_URL": "https://recruit-flow-backend.onrender.com/api"
     }
   }
 }
