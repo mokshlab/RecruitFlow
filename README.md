@@ -75,4 +75,4 @@ RecruitFlow solves the coordination problem between job seekers and recruiters o
 ## Developer
 
 **Moksh**
-GitHub: [@MOKSH88888](https://github.com/MOKSH88888)
+GitHub: [@mokshlab](https://github.com/mokshlab)

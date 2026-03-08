@@ -6,7 +6,7 @@ Node.js/Express REST API server for the RecruitFlow job portal with real-time We
 
 ```bash
 npm install
-cp .env.example .env  # Create and configure environment file
+# Create .env in project root with MONGO_URI, JWT_SECRET, etc.
 node config/seedDatabase.js  # Seed demo data
 npm start  # Server runs on http://localhost:5000
 ```
@@ -50,17 +50,6 @@ backend/
 **System:**
 - `GET /api/health` - Health check
 - `GET /api/docs` - Complete API documentation
-
-## Environment Variables
-
-```env
-NODE_ENV=production
-MONGO_URI=mongodb+srv://user:pass@cluster.mongodb.net/job_portal_db
-JWT_SECRET=<64-char-hex-string>
-DEFAULT_ADMIN_USERNAME=admin
-DEFAULT_ADMIN_PASSWORD=<secure-password>
-FRONTEND_URL=https://your-frontend.vercel.app
-```
 
 ## Security
 
