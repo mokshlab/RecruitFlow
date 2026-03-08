@@ -1,6 +1,7 @@
 // Migration script to update old status values to new professional ones
+const path = require('path');
 const mongoose = require('mongoose');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '../../.env') });
 const User = require('../models/User');
 const Job = require('../models/Job');
 

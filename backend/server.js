@@ -14,7 +14,7 @@ const { errorHandler, notFound } = require('./middleware/errorMiddleware');
 const constants = require('./config/constants');
 const { initializeSocket } = require('./config/socket');
 const { initGridFS } = require('./config/gridfs');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 const app = express();
 const server = http.createServer(app);
@@ -69,7 +69,7 @@ app.use(express.urlencoded({ extended: true, limit: constants.JSON_BODY_LIMIT })
 
 app.get('/', (req, res) => {
   res.status(200).json({
-    name: 'Job Portal API',
+    name: 'Recruit Flow API',
     version: '1.2.0',
     status: 'running',
     endpoints: {

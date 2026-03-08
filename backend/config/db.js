@@ -1,8 +1,9 @@
+const path = require('path');
 const mongoose = require('mongoose');
 const logger = require('./logger');
 const constants = require('./constants');
 const { initGridFS } = require('./gridfs');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '../../.env') });
 
 /**
  * Connect to MongoDB with improved retry logic, error handling, and connection pooling

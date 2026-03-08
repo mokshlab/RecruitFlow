@@ -1,12 +1,13 @@
 // backend/tests/auth.test.js
 // Simple authentication tests
 
+const path = require('path');
 const request = require('supertest');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const User = require('../models/User');
 const Admin = require('../models/Admin');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '../../.env') });
 
 // Simple test helper - no full framework needed
 const BASE_URL = process.env.TEST_API_URL || 'http://localhost:5000';
@@ -27,7 +28,7 @@ const testAdmin = {
 // Helper to connect to test database
 async function connectTestDB() {
   try {
-    await mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/job_portal_test');
+    await mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/recruit_flow_test');
     console.log('✅ Connected to test database');
   } catch (error) {
     console.error('❌ Test DB connection failed:', error.message);

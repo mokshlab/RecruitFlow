@@ -1,5 +1,5 @@
 // ============================================================================
-// Database Seeding Script - JobFinder Platform
+// Database Seeding Script - Recruit Flow Platform
 // ============================================================================
 // This script populates the database with realistic sample data including:
 // - 6 diverse user profiles (varying experience levels and tech stacks)
@@ -7,16 +7,17 @@
 // - Sample applications with realistic status progression
 // - Bookmark data to demonstrate user engagement features
 // 
-// DEMO PASSWORDS: Sample users use 'User@1234', demo user uses 'Demo$45' (intended for public demo)
+// DEMO PASSWORDS: Sample users use 'User@1234', demo user uses 'Demo$456' (intended for public demo)
 // ADMIN PASSWORDS: Superadmin (admin) set via DEFAULT_ADMIN_PASSWORD, normal admin (testadmin) uses 'Check#2026'
 // 
 // Usage: node backend/config/seedDatabase.js
 // Note: This clears existing data except the default admin account
 // ============================================================================
 
+const path = require('path');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '../../.env') });
 const User = require('../models/User');
 const Job = require('../models/Job');
 const Admin = require('../models/Admin');
@@ -26,7 +27,7 @@ const sampleUsers = [
   {
     name: 'Demo User',
     email: 'demo.user@example.com',
-    password: 'Demo$45',
+    password: 'Demo$456',
     phone: '+91-9506095060',
     gender: 'Male',
     experience: 7,
@@ -428,7 +429,7 @@ async function seedDatabase() {
     console.log(`   Bookmarks: ${bookmarkCount}`);
     console.log(`   Admin: ${process.env.DEFAULT_ADMIN_USERNAME}`);
     console.log('\nTest Credentials:');
-    console.log(`   User: demo.user@example.com / Demo$45`);
+    console.log(`   User: demo.user@example.com / Demo$456`);
     console.log(`   Superadmin: ${process.env.DEFAULT_ADMIN_USERNAME} / ${process.env.DEFAULT_ADMIN_PASSWORD}`);
     console.log(`   Admin: testadmin / Check#2026\n`);
 

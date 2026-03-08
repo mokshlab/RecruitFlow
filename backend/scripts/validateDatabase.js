@@ -1,6 +1,7 @@
 // Database validation script - check data integrity
+const path = require('path');
 const mongoose = require('mongoose');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '../../.env') });
 const User = require('../models/User');
 const Job = require('../models/Job');
 const Admin = require('../models/Admin');
