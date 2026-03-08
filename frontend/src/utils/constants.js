@@ -5,8 +5,8 @@ export const colors = {
     gradient: 'linear-gradient(135deg, #0D9488 0%, #0F766E 100%)',
   },
   admin: {
-    gradient: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
-    border: '#FDE68A',
+    gradient: 'linear-gradient(135deg, #E8920C 0%, #C67A08 100%)',
+    border: '#F5C842',
   },
   text: {
     primary: '#2d3748',

@@ -11,7 +11,7 @@ const Footer = () => {
       sx={{
         bgcolor: '#1C1917',
         borderTop: '3px solid transparent',
-        backgroundImage: 'linear-gradient(#1C1917, #1C1917), linear-gradient(90deg, #0D9488, #F59E0B)',
+        backgroundImage: 'linear-gradient(#1C1917, #1C1917), linear-gradient(90deg, #0D9488, #E8920C)',
         backgroundOrigin: 'border-box',
         backgroundClip: 'padding-box, border-box',
         py: 3,
@@ -27,7 +27,7 @@ const Footer = () => {
                 width: 30,
                 height: 30,
                 borderRadius: '8px',
-                background: 'linear-gradient(135deg, #0D9488 0%, #F59E0B 100%)',
+                background: 'linear-gradient(135deg, #0D9488 0%, #E8920C 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

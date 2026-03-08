@@ -19,7 +19,7 @@ const styles = {
     marginBottom: '32px',
   },
   headerBanner: {
-    background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 60%, #F59E0B 100%)',
+    background: 'linear-gradient(135deg, #0D9488 0%, #0F766E 60%, #E8920C 100%)',
     borderRadius: '16px',
     padding: '36px 24px',
     marginBottom: '28px',
@@ -130,7 +130,7 @@ const styles = {
   newsImagePlaceholder: {
     width: '33.333%',
     height: '100%',
-    background: 'linear-gradient(to bottom right, #0D9488, #F59E0B)',
+    background: 'linear-gradient(to bottom right, #0D9488, #E8920C)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -272,7 +272,7 @@ const NewsPage = () => {
           .news-card:hover {
             box-shadow: 0 12px 30px rgba(13, 148, 136, 0.15);
             transform: translateY(-3px);
-            border-left-color: #F59E0B;
+            border-left-color: #E8920C;
           }
           .category-btn-inactive:hover {
             background-color: #CCFBF1;
@@ -280,8 +280,8 @@ const NewsPage = () => {
             color: #0D9488;
           }
           .read-more-link:hover {
-            color: #F59E0B;
-            border-bottom-color: #F59E0B;
+            color: #E8920C;
+            border-bottom-color: #E8920C;
           }
           @media (min-width: 768px) {
             .news-grid {

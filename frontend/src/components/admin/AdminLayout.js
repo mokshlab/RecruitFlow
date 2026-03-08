@@ -64,7 +64,7 @@ const AdminLayout = ({ children }) => {
       <Box
         sx={{
           p: 3,
-          background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+          background: 'linear-gradient(135deg, #E8920C 0%, #C67A08 100%)',
           color: 'white'
         }}
       >
@@ -82,7 +82,7 @@ const AdminLayout = ({ children }) => {
           <Avatar sx={{ 
             width: 40, 
             height: 40, 
-            background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+            background: 'linear-gradient(135deg, #E8920C 0%, #C67A08 100%)',
             fontWeight: 700
           }}>
             {admin?.username?.charAt(0).toUpperCase()}
@@ -115,14 +115,14 @@ const AdminLayout = ({ children }) => {
               sx={{
                 borderRadius: 2,
                 '&.Mui-selected': {
-                  bgcolor: alpha('#F59E0B', 0.12),
-                  color: '#F59E0B',
+                  bgcolor: alpha('#E8920C', 0.12),
+                  color: '#E8920C',
                   '&:hover': {
-                    bgcolor: alpha('#F59E0B', 0.18)
+                    bgcolor: alpha('#E8920C', 0.18)
                   }
                 },
                 '&:hover': {
-                  bgcolor: alpha('#F59E0B', 0.08)
+                  bgcolor: alpha('#E8920C', 0.08)
                 }
               }}
             >

@@ -82,8 +82,8 @@ const AdminDashboard = () => {
       title: 'Total Admins', 
       value: stats?.totalAdmins || 0, 
       icon: <AdminIcon sx={{ fontSize: 40 }} />,
-      gradient: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
-      color: '#F59E0B'
+      gradient: 'linear-gradient(135deg, #E8920C 0%, #C67A08 100%)',
+      color: '#E8920C'
     },
     { 
       title: 'Total Jobs', 
@@ -96,8 +96,8 @@ const AdminDashboard = () => {
       title: 'Total Applications', 
       value: stats?.totalApplications || 0, 
       icon: <ApplicationIcon sx={{ fontSize: 40 }} />,
-      gradient: 'linear-gradient(135deg, #F97316 0%, #F59E0B 100%)',
-      color: '#F97316'
+      gradient: 'linear-gradient(135deg, #C67A08 0%, #E8920C 100%)',
+      color: '#C67A08'
     },
     { 
       title: 'Registered Users', 
@@ -112,7 +112,7 @@ const AdminDashboard = () => {
     return (
       <AdminLayout>
         <Box display="flex" justifyContent="center" alignItems="center" minHeight="60vh">
-          <CircularProgress size={60} sx={{ color: '#F59E0B' }} />
+          <CircularProgress size={60} sx={{ color: '#E8920C' }} />
         </Box>
       </AdminLayout>
     );
@@ -219,13 +219,13 @@ const AdminDashboard = () => {
                 size="small"
                 onClick={() => navigate('/admin-jobs')}
                 sx={{
-                  borderColor: '#F59E0B',
-                  color: '#F59E0B',
+                  borderColor: '#E8920C',
+                  color: '#E8920C',
                   textTransform: 'none',
                   fontWeight: 600,
                   '&:hover': {
-                    borderColor: '#F97316',
-                    bgcolor: alpha('#F59E0B', 0.04)
+                    borderColor: '#C67A08',
+                    bgcolor: alpha('#E8920C', 0.04)
                   }
                 }}
               >
@@ -250,7 +250,7 @@ const AdminDashboard = () => {
                       <TableRow 
                         key={job._id} 
                         sx={{ 
-                          '&:hover': { bgcolor: alpha('#F59E0B', 0.02) },
+                          '&:hover': { bgcolor: alpha('#E8920C', 0.02) },
                           transition: 'background-color 0.2s ease'
                         }}
                       >
@@ -262,7 +262,7 @@ const AdminDashboard = () => {
                         <TableCell>{job.companyName}</TableCell>
                         <TableCell>{job.location}</TableCell>
                         <TableCell>
-                          <Typography fontWeight={600} color="#F59E0B">
+                          <Typography fontWeight={600} color="#E8920C">
                             ₹{job.salary?.toLocaleString('en-IN')}
                           </Typography>
                         </TableCell>
@@ -271,8 +271,8 @@ const AdminDashboard = () => {
                             label={job.applicants?.length || 0}
                             size="small"
                             sx={{
-                              bgcolor: alpha('#F59E0B', 0.1),
-                              color: '#F59E0B',
+                              bgcolor: alpha('#E8920C', 0.1),
+                              color: '#E8920C',
                               fontWeight: 600
                             }}
                           />
@@ -285,7 +285,7 @@ const AdminDashboard = () => {
                   ) : (
                     <TableRow>
                       <TableCell colSpan={6} align="center" sx={{ py: 8 }}>
-                        <WorkIcon sx={{ fontSize: 60, color: '#F59E0B', opacity: 0.35, mb: 2 }} />
+                        <WorkIcon sx={{ fontSize: 60, color: '#E8920C', opacity: 0.35, mb: 2 }} />
                         <Typography color="text.secondary">
                           No jobs posted yet
                         </Typography>

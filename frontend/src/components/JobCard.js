@@ -110,7 +110,7 @@ const JobCard = ({ job, isNewJob = false }) => {
           transform: 'translateY(-4px)',
           boxShadow: '0 8px 24px rgba(13,148,136,0.15)',
           borderColor: 'divider',
-          borderLeft: '4px solid #F59E0B',
+          borderLeft: '4px solid #E8920C',
         }
       }}
     >
@@ -133,7 +133,7 @@ const JobCard = ({ job, isNewJob = false }) => {
               position: 'absolute',
               top: 10,
               right: user ? 52 : 10,
-              background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+              background: 'linear-gradient(135deg, #E8920C 0%, #C67A08 100%)',
               color: 'white',
               fontWeight: 700,
               fontSize: '0.65rem',
@@ -268,7 +268,7 @@ const JobCard = ({ job, isNewJob = false }) => {
         
         {/* Salary */}
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 0.75 }}>
-          <Typography variant="body2" fontWeight={700} sx={{ color: '#F59E0B', fontSize: '0.9375rem' }}>
+          <Typography variant="body2" fontWeight={700} sx={{ color: '#E8920C', fontSize: '0.9375rem' }}>
             {formattedSalary}
           </Typography>
           <Typography variant="caption" sx={{ color: 'text.secondary', fontWeight: 500 }}>

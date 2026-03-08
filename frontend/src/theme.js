@@ -10,7 +10,7 @@ const theme = createTheme({
       light: '#5EEAD4',
     },
     secondary: {
-      main: '#F59E0B',    // Amber Gold — serotonin, warmth, optimism
+      main: '#E8920C',    // Amber Gold — serotonin, warmth, optimism
     },
     background: {
       default: '#FFFBEB',  // Warm cream — inviting, not clinical

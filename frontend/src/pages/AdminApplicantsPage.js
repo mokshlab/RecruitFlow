@@ -156,7 +156,7 @@ const AdminApplicantsPage = () => {
     return (
       <AdminLayout>
         <Box display="flex" justifyContent="center" alignItems="center" minHeight="60vh">
-          <CircularProgress size={60} sx={{ color: '#F59E0B' }} />
+          <CircularProgress size={60} sx={{ color: '#E8920C' }} />
         </Box>
       </AdminLayout>
     );
@@ -179,8 +179,8 @@ const AdminApplicantsPage = () => {
                   label={job.location}
                   size="small"
                   sx={{
-                    bgcolor: alpha('#F59E0B', 0.1),
-                    color: '#F59E0B',
+                    bgcolor: alpha('#E8920C', 0.1),
+                    color: '#E8920C',
                     fontWeight: 600
                   }}
                 />
@@ -191,12 +191,12 @@ const AdminApplicantsPage = () => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  bgcolor: alpha('#F59E0B', 0.1),
-                  color: '#F59E0B',
+                  bgcolor: alpha('#E8920C', 0.1),
+                  color: '#E8920C',
                   fontWeight: 600,
                   fontSize: '0.875rem',
                   border: '1px solid',
-                  borderColor: alpha('#F59E0B', 0.2),
+                  borderColor: alpha('#E8920C', 0.2),
                   borderRadius: '16px',
                   px: 1.5,
                   py: 0.5,
@@ -223,7 +223,7 @@ const AdminApplicantsPage = () => {
                   InputProps={{
                     startAdornment: (
                       <SearchIcon sx={{ 
-                        background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+                        background: 'linear-gradient(135deg, #E8920C 0%, #C67A08 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
@@ -240,10 +240,10 @@ const AdminApplicantsPage = () => {
                         borderColor: 'rgba(0, 0, 0, 0.1)'
                       },
                       '&:hover fieldset': {
-                        borderColor: '#F59E0B'
+                        borderColor: '#E8920C'
                       },
                       '&.Mui-focused fieldset': {
-                        borderColor: '#F59E0B'
+                        borderColor: '#E8920C'
                       }
                     }
                   }}
@@ -285,8 +285,8 @@ const AdminApplicantsPage = () => {
                           py: 1.5,
                           cursor: 'pointer',
                           userSelect: 'none',
-                          bgcolor: sortConfig.key === 'name' ? alpha('#F59E0B', 0.08) : 'transparent',
-                          '&:hover': { bgcolor: alpha('#F59E0B', 0.12) },
+                          bgcolor: sortConfig.key === 'name' ? alpha('#E8920C', 0.08) : 'transparent',
+                          '&:hover': { bgcolor: alpha('#E8920C', 0.12) },
                           transition: 'all 0.2s ease'
                         }}
                         onClick={() => handleSort('name')}
@@ -295,8 +295,8 @@ const AdminApplicantsPage = () => {
                           Applicant
                           {sortConfig.key === 'name' && (
                             sortConfig.direction === 'asc' 
-                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
-                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
+                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
+                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
                           )}
                         </Box>
                       </TableCell>
@@ -310,8 +310,8 @@ const AdminApplicantsPage = () => {
                           py: 1.5,
                           cursor: 'pointer',
                           userSelect: 'none',
-                          bgcolor: sortConfig.key === 'email' ? alpha('#F59E0B', 0.08) : 'transparent',
-                          '&:hover': { bgcolor: alpha('#F59E0B', 0.12) },
+                          bgcolor: sortConfig.key === 'email' ? alpha('#E8920C', 0.08) : 'transparent',
+                          '&:hover': { bgcolor: alpha('#E8920C', 0.12) },
                           transition: 'all 0.2s ease'
                         }}
                         onClick={() => handleSort('email')}
@@ -320,8 +320,8 @@ const AdminApplicantsPage = () => {
                           Email
                           {sortConfig.key === 'email' && (
                             sortConfig.direction === 'asc' 
-                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
-                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
+                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
+                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
                           )}
                         </Box>
                       </TableCell>
@@ -335,8 +335,8 @@ const AdminApplicantsPage = () => {
                           py: 1.5,
                           cursor: 'pointer',
                           userSelect: 'none',
-                          bgcolor: sortConfig.key === 'experience' ? alpha('#F59E0B', 0.08) : 'transparent',
-                          '&:hover': { bgcolor: alpha('#F59E0B', 0.12) },
+                          bgcolor: sortConfig.key === 'experience' ? alpha('#E8920C', 0.08) : 'transparent',
+                          '&:hover': { bgcolor: alpha('#E8920C', 0.12) },
                           transition: 'all 0.2s ease',
                           minWidth: { xs: 70, md: 100 }
                         }}
@@ -346,8 +346,8 @@ const AdminApplicantsPage = () => {
                           Experience
                           {sortConfig.key === 'experience' && (
                             sortConfig.direction === 'asc' 
-                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
-                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
+                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
+                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
                           )}
                         </Box>
                       </TableCell>
@@ -361,8 +361,8 @@ const AdminApplicantsPage = () => {
                           py: 1.5,
                           cursor: 'pointer',
                           userSelect: 'none',
-                          bgcolor: sortConfig.key === 'gender' ? alpha('#F59E0B', 0.08) : 'transparent',
-                          '&:hover': { bgcolor: alpha('#F59E0B', 0.12) },
+                          bgcolor: sortConfig.key === 'gender' ? alpha('#E8920C', 0.08) : 'transparent',
+                          '&:hover': { bgcolor: alpha('#E8920C', 0.12) },
                           transition: 'all 0.2s ease',
                           display: { xs: 'none', md: 'table-cell' }
                         }}
@@ -372,8 +372,8 @@ const AdminApplicantsPage = () => {
                           Gender
                           {sortConfig.key === 'gender' && (
                             sortConfig.direction === 'asc' 
-                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
-                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
+                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
+                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
                           )}
                         </Box>
                       </TableCell>
@@ -384,8 +384,8 @@ const AdminApplicantsPage = () => {
                           Status
                           {sortConfig.key === 'status' && (
                             sortConfig.direction === 'asc' 
-                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
-                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#F59E0B' }} />
+                              ? <ArrowUpwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
+                              : <ArrowDownwardIcon fontSize="medium" sx={{ color: '#E8920C' }} />
                           )}
                         </Box>
                       </TableCell>
@@ -396,7 +396,7 @@ const AdminApplicantsPage = () => {
                       <TableRow
                         key={applicant._id}
                         sx={{
-                          '&:hover': { bgcolor: alpha('#F59E0B', 0.02) },
+                          '&:hover': { bgcolor: alpha('#E8920C', 0.02) },
                           transition: 'background-color 0.2s ease'
                         }}
                       >
@@ -408,8 +408,8 @@ const AdminApplicantsPage = () => {
                                 width: 32,
                                 height: 32,
                                 border: '2px solid #e2e8f0',
-                                bgcolor: alpha('#F59E0B', 0.1),
-                                color: '#F59E0B',
+                                bgcolor: alpha('#E8920C', 0.1),
+                                color: '#E8920C',
                                 fontWeight: 600
                               }}
                             >
@@ -426,12 +426,12 @@ const AdminApplicantsPage = () => {
                             label={`${applicant.experience} yrs`}
                             size="small"
                             sx={{
-                              bgcolor: alpha('#F59E0B', 0.12),
-                              color: '#F59E0B',
+                              bgcolor: alpha('#E8920C', 0.12),
+                              color: '#E8920C',
                               fontWeight: 600,
                               fontSize: '0.75rem',
                               border: '1px solid',
-                              borderColor: alpha('#F59E0B', 0.2)
+                              borderColor: alpha('#E8920C', 0.2)
                             }}
                           />
                         </TableCell>
@@ -449,15 +449,15 @@ const AdminApplicantsPage = () => {
                               }}
                               sx={{
                                 textTransform: 'none',
-                                borderColor: '#F59E0B',
-                                color: '#F59E0B',
+                                borderColor: '#E8920C',
+                                color: '#E8920C',
                                 fontWeight: 600,
                                 fontSize: '0.75rem',
                                 border: '1.5px solid',
                                 borderRadius: 1.5,
                                 '&:hover': {
-                                  borderColor: '#F59E0B',
-                                  bgcolor: alpha('#F59E0B', 0.08),
+                                  borderColor: '#E8920C',
+                                  bgcolor: alpha('#E8920C', 0.08),
                                   transform: 'scale(1.02)'
                                 },
                                 transition: 'all 0.2s ease'
@@ -488,7 +488,7 @@ const AdminApplicantsPage = () => {
                                   gap: 1
                                 },
                                 '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                                  borderColor: '#F59E0B',
+                                  borderColor: '#E8920C',
                                   borderWidth: 2
                                 }
                               }}
@@ -555,7 +555,7 @@ const AdminApplicantsPage = () => {
                   <ApplicationIcon 
                     sx={{ 
                       fontSize: 64, 
-                      background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+                      background: 'linear-gradient(135deg, #E8920C 0%, #C67A08 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text'
